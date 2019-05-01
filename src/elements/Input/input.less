@@ -1,0 +1,205 @@
+/**
+ * Input styles
+ */
+
+// general variables
+@ui-input-border: 1px solid @ui-color-gray-medium;
+@ui-input-border-focus: 1px solid @ui-color-gray-dark;
+@ui-input-border-radius: 0px;
+
+@ui-input-font-family: @ui-font-sans-serif;
+@ui-input-font-weight: 500;
+@ui-input-font-size: @ui-font-x-small;
+@ui-input-letter-spacing: 0.5px;
+
+@ui-input-padding: @ui-small @ui-x-small;
+@ui-input-background: @ui-color-white;
+
+@ui-input-select-padding: @ui-small @ui-large @ui-small @ui-x-small;
+@ui-input-select-background: @ui-color-white;
+
+@ui-input-label-font-weight: 500;
+@ui-input-label-font-size: 0.8em;
+@ui-input-label-margin: 0 0 @ui-x-small;
+@ui-input-label-color: @ui-color-black;
+@ui-input-placeholder-color: @ui-color-gray-medium;
+
+@ui-input-radio-or-checkbox-size: 1.125em;
+@ui-input-radio-or-checkbox-padding: @ui-x-small 0 @ui-x-small 1.75em;
+@ui-input-radio-or-checkbox-border: 0.125em solid @ui-color-gray-medium;
+@ui-input-radio-or-checkbox-background: @ui-color-white;
+@ui-input-radio-or-checkbox-background-checked: @ui-color-green;
+@ui-input-radio-or-checkbox-border-checked: 0.125em solid @ui-color-green;
+
+.ui-input-label {
+	display: block;
+	margin: @ui-input-label-margin;
+	font-family: @ui-input-font-family;
+	font-size: @ui-input-label-font-size;
+	font-weight: @ui-input-label-font-weight;
+	color: @ui-input-label-color;
+}
+
+.ui-input {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	&:not([type="radio"]),
+	&:not([type="checkbox"]) {
+		display: inline-block;
+		width: 100%;
+		padding: @ui-input-padding;
+
+		border: @ui-input-border;
+		border-radius: @ui-input-border-radius;
+		outline: none;
+
+		font-family: @ui-input-font-family;
+		font-weight: @ui-input-font-weight;
+		font-size: @ui-input-font-size;
+		letter-spacing: @ui-input-letter-spacing;
+
+		background: @ui-input-background;
+
+		// states
+		&:focus {
+			border: @ui-input-border-focus;
+		}
+
+		&::placeholder {
+			color: @ui-input-placeholder-color;
+		}
+
+		&.bare {
+			border: none;
+			background-color: transparent;
+
+			&:focus {
+				border: none;
+			}
+		}
+	}
+
+	select& {
+		padding: @ui-input-select-padding;
+		background: @ui-input-select-background;
+	}
+
+
+	&[type="radio"] {
+		display: none;
+
+		+ label {
+			position: relative;
+			display: block;
+			cursor: pointer;
+			line-height: @ui-input-radio-or-checkbox-size;
+			padding: @ui-input-radio-or-checkbox-padding;
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: @ui-input-radio-or-checkbox-size;
+				height: @ui-input-radio-or-checkbox-size;
+				border-radius: 50%;
+				border: @ui-input-radio-or-checkbox-border;
+				background: @ui-input-radio-or-checkbox-background;
+				top: 0.5em;
+				left: 0;
+				box-sizing: border-box;
+			}
+
+		}
+
+		&:checked {
+			+ label {
+				&:before {
+					border: @ui-input-radio-or-checkbox-border-checked;
+				}
+
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					height: 0.625em;
+					width: 0.625em;
+					border-radius: 50%;
+					background: @ui-color-green;
+					margin-top: 0.25em;
+					top: 0.5em;
+					left: 0.25em;
+				}
+			}
+		}
+
+	}
+
+	&[type="checkbox"] {
+		display: none;
+
+		+ label {
+			position: relative;
+			display: block;
+			cursor: pointer;
+			line-height: @ui-input-radio-or-checkbox-size;
+			padding: @ui-input-radio-or-checkbox-padding;
+
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				height: @ui-input-radio-or-checkbox-size;
+				width: @ui-input-radio-or-checkbox-size;
+				border: @ui-input-radio-or-checkbox-border;
+				background: @ui-input-radio-or-checkbox-background;
+				left: 0;
+				top: 0.5em;
+				box-sizing: border-box;
+			}
+		}
+
+		&:checked {
+			+ label {
+				&:before {
+					background: @ui-input-radio-or-checkbox-background-checked;
+					border: @ui-input-radio-or-checkbox-border-checked;
+				}
+
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					width: 0.3125em;
+  					height: 0.5625em;
+					border: solid @ui-color-white;
+  					border-width: 0 0.125em 0.125em 0;
+					transform: rotate(45deg);
+					left: 0.3125em;
+					top: 0.5625em;
+				}
+			}
+		}
+	}
+}
+
+.ui-select-wrap {
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		pointer-events: none;
+		border: 0.375em solid transparent;
+		border-top-color: @ui-color-black;
+		right: 0.75em;
+		top: 50%;
+		margin-top: -0.1875em;
+	}
+
+	&.bare:after {
+		display: none;
+	}
+}

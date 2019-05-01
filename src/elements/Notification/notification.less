@@ -1,0 +1,36 @@
+/**
+ * Notification styles
+ */
+
+@ui-notification-background-color: @ui-color-gray-lighter;
+@ui-notification-close-color: @ui-color-gray-darkest;
+@ui-notification-border: 1px solid @ui-color-gray-medium;
+@ui-notification-border-radius: 2px;
+@ui-notification-box-shadow: 2px 2px 6px -2px rgba(0, 0, 0, 0.3);
+@ui-notification-padding: 0.5em;
+@ui-notification-z-index: 99999;
+
+.ui-notification {
+	position: fixed;
+	left: 1em;
+	top: 1em;
+	right: 1em;
+	background-color: @ui-notification-background-color;
+	border: @ui-notification-border;
+	border-radius: @ui-notification-border-radius;
+	padding: @ui-notification-padding;
+	padding-right: 1.5em;
+	box-shadow: @ui-notification-box-shadow;
+	z-index: @ui-notification-z-index;
+
+	.ui-notification-close {
+		color: @ui-notification-close-color;
+		position: absolute;
+		right: .5em;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 20px;
+		cursor: pointer;
+		user-select: none;
+	}
+}

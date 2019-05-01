@@ -1,0 +1,44 @@
+/**
+ * Div
+ */
+
+// item variables
+@ui-section-item-border: 1px solid @ui-color-gray-light;
+@ui-section-item-padding: @ui-x-small 0;
+
+// card variables
+@ui-section-card-background: @ui-color-white;
+@ui-section-card-padding: @ui-small;
+@ui-section-card-box-shadow: 2px 2px 6px -2px rgba(0, 0, 0, 0.3);
+@ui-section-card-border-radius: 5px;
+@ui-section-card-section-border: 1px solid @ui-color-gray-light;
+
+.ui-div {
+	&.item {
+		padding: @ui-section-item-padding;
+		border-bottom: @ui-section-item-border;
+	}
+
+	&.card {
+		padding: @ui-section-card-padding;
+		background: @ui-section-card-background;
+		border-radius: @ui-section-card-border-radius;
+		box-shadow: @ui-section-card-box-shadow;
+
+		.subsection {
+			margin-left: (@ui-section-card-padding * -1);
+			margin-right: (@ui-section-card-padding * -1);
+			padding: @ui-section-card-padding;
+			border-bottom: @ui-section-card-section-border;
+
+			&:first-of-type {
+				margin-top: (@ui-section-card-padding * -1);
+			}
+
+			&:last-of-type {
+				margin-bottom: (@ui-section-card-padding * -1);
+				border-bottom: none;
+			}
+		}
+	}
+}
