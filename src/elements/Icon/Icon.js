@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import './Icon.less';
 
-const svgs = require.context('../svgs', false, /^\.\/.*\.svg$/);
+const svgs = require.context('./svgs', false, /^\.\/.*\.svg$/);
 
 const Icon = ({ name, size, width = size, height = size, style, className, onClick }) => {
 	/**
@@ -15,7 +15,7 @@ const Icon = ({ name, size, width = size, height = size, style, className, onCli
 	svgs.keys().map((svg) => {
 		const svgName = svg.replace(/\.\/|\.svg/gi, '');
 
-		if(svgName === name) image = require(`../svgs/${svgName}.svg`).default;
+		if(svgName === name) image = require(`./svgs/${svgName}.svg`).default;
 	});
 
 	// Height and width default to `size` prop, icons default to inline-block but can be overwritten in style
