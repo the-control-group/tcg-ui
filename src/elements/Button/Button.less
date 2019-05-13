@@ -2,6 +2,103 @@
  * Button styles
  */
 
+// general variables
+@ui-button-color: @ui-color-white;
+@ui-button-background: @ui-color-green;
+@ui-button-background-hover: @ui-color-green-darker;
+@ui-button-border: 1px solid transparent;
+@ui-button-border-radius: 2px;
+@ui-button-padding: @ui-x-small @ui-x-large;
+@ui-button-transition: 150ms background-color, 150ms border-color, 150ms color;
+@ui-button-font-size: 20px;
+@ui-button-font-weight: 600;
+@ui-button-disabled-background: @ui-color-gray-medium;
+@ui-button-disabled-color: @ui-color-gray-dark;
+
+// small button
+@ui-button-small-padding: @ui-x-small @ui-small;
+@ui-button-small-font-size: 15px;
+
+// mini button
+@ui-button-mini-padding: @ui-x-small;
+@ui-button-mini-font-size: 15px;
+
+// bare button
+@ui-button-bare-color: @ui-color-blue;
+@ui-button-bare-hover: @ui-color-blue-darker;
+@ui-button-bare-font-size: 14px;
+@ui-button-bare-transform: uppercase;
+
 .ui-button {
-	background: red;
+	margin: 0;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	padding: @ui-button-padding;
+	border: @ui-button-border;
+	border-radius: @ui-button-border-radius;
+	background: @ui-button-background;
+	color: @ui-button-color;
+	font-size: @ui-button-font-size;
+	font-weight: @ui-button-font-weight;
+	transition: @ui-button-transition;
+
+	&:hover {
+		background: @ui-button-background-hover;
+	}
+
+	&:disabled {
+		background: @ui-button-disabled-background;
+		color: @ui-button-disabled-color;
+		cursor: not-allowed;
+	}
+
+	// variants
+	&.small {
+		padding: @ui-button-small-padding;
+		font-size: @ui-button-small-font-size;
+	}
+
+	&.mini {
+		padding: @ui-button-mini-padding;
+		font-size: @ui-button-mini-font-size;
+	}
+
+	&.bare {
+		background: transparent;
+		color: @ui-button-bare-color;
+		padding: 0;
+		text-transform: @ui-button-bare-transform;
+		font-size: @ui-button-bare-font-size;
+
+		&:hover {
+			color: @ui-button-bare-hover;
+		}
+
+		&:disabled {
+			opacity: @ui-opacity-low;
+		}
+	}
+
+	// styles
+	&.outline {
+		background: transparent;
+		border-color: @ui-button-background;
+		color: @ui-button-background;
+
+		&:disabled {
+			border-color: @ui-button-disabled-color;
+			color: @ui-button-disabled-color;
+		}
+	}
+
+	// util
+	&.full {
+		display: block;
+		width: 100%;
+	}
+
+	&.loading {
+		cursor: progress;
+	}
 }
