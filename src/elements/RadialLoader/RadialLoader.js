@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 
 const RadialLoader = (props) => {
+	//Set default size
 	const width = props.width ? props.width : 20,
 		height = props.height ? props.height : 20;
+
 	return (
 		<object className="radial-loader">
 			<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style={{width, height}}>
