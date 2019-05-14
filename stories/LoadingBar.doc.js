@@ -8,7 +8,7 @@ storiesOf('LoadingBar', module)
 			<LoadingBar
 				delay={3000}
 				duration={10000}
-				onComplete={()=>alert('complete!')}
+				onComplete={()=>alert('onComplete function fired!')}
 			/>
 		</div>
 	));

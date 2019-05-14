@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-import './LoadingBar.less';
-
 class LoadingBar extends Component {
 	constructor(props) {
 		super(props);
@@ -16,9 +14,12 @@ class LoadingBar extends Component {
 	}
 
 	componentDidMount() {
+		// Apply delay upon component mount
 		setTimeout(() => {
+			// Fire timer function every 100th of duration time (ex: for a duration of 10000 ms, timer fn would fire every 1000 ms)
 			const intervalId = setInterval(this.timer, (this.props.duration / 100));
 
+			// Set intervalId in state in order to clear out timer
 			this.setState({intervalId});
 		}, this.props.delay);
 	}
@@ -30,9 +31,11 @@ class LoadingBar extends Component {
 	}
 
 	timer() {
+		// Increment percentage to fill loader
 		this.setState({ percentage: this.state.percentage + 1 });
 
 		if(this.state.percentage === 100) {
+			// Once the the loader has filled, stop firing functionality and execute onComplete method
 			clearInterval(this.state.intervalId);
 			this.props.onComplete();
 		}
@@ -41,7 +44,7 @@ class LoadingBar extends Component {
 	render() {
 		return (
 			<div className="ui-loading-bar-wrapper">
-				<div className="ui-loading-bar" style={{width: this.state.percentage + '%'}} />
+				<div className="bar" style={{width: this.state.percentage + '%'}} />
 			</div>
 		);
 	}
