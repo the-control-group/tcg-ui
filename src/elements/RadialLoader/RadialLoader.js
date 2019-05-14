@@ -2,14 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const RadialLoader = (props) => {
-	//Set default size
-	const width = props.width ? props.width : 20,
-		height = props.height ? props.height : 20;
-
+const RadialLoader = ({size = 20}) => {
 	return (
 		<object className="radial-loader">
-			<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style={{width, height}}>
+			<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style={{height: size, width: size}}>
 				<rect x="46.5" y="40" width="7" height="20" rx="5" ry="5" fill="#a6a6a6" transform="rotate(0 50 50) translate(0 -30)">
 					<animate attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite"></animate>
 				</rect>
@@ -52,8 +48,7 @@ const RadialLoader = (props) => {
 };
 
 RadialLoader.propTypes = {
-	height: PropTypes.number,
-	width: PropTypes.number
+	size: PropTypes.number
 };
 
 export default RadialLoader;

@@ -5,6 +5,6 @@ import { RadialLoader } from '../src';
 storiesOf('RadialLoader', module)
 	.add('RadialLoader', () => (
 		<div>
-			<RadialLoader height={32} width={32} />
+			<RadialLoader size={32} />
 		</div>
 	));
