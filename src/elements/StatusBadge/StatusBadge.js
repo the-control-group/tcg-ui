@@ -34,8 +34,4 @@ const StatusBadge = ({ children, active, paused, pending, archived, ...other }) 
 	);
 };
 
-StatusBadge.propTypes = {
-	// children: PropTypes.node.isRequired
-};
-
 export default StatusBadge;
