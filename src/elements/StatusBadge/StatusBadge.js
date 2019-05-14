@@ -33,7 +33,7 @@ const StatusBadge = ({ children, active, paused, pending, archived, ...other }) 
 			}
 			tag="span"
       >
-      <span className="dot" />
+      <span className="status-badge-dot" />
 			{active &&
 				'ACTIVE'}
 			{paused &&
