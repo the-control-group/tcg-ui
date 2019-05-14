@@ -2,6 +2,61 @@
 //  * StatusBadge styles
 //  */
 
+.status-badge {
+  margin: 0;
+  display: inline-block;
+  border: @ui-button-border;
+  border-radius: 1000px;
+  padding: @ui-xx-small @base-spacing-unit;
+  font-family: @ui-font-sans-serif;
+  
+  &.active {
+    color: @ui-color-white;
+    border-color: @ui-color-green;
+
+    .dot {
+      background-color: @ui-color-green;
+    }
+  }
+
+    &.paused {
+    color: @ui-color-white;
+    border-color: @ui-color-red;
+
+        .dot {
+      background-color: @ui-color-red;
+    }
+  }
+
+    &.pending {
+    color: @ui-color-white;
+    border-color: @ui-color-yellow;
+
+        .dot {
+      background-color: @ui-color-yellow;
+    }
+  }
+
+    &.archived {
+    color: @ui-color-white;
+    border-color: @ui-color-gray-dark;
+
+        .dot {
+      background-color: @ui-color-gray-dark;
+    }
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+  }
+}
+
+
 // // general variables
 // @ui-button-color: @ui-color-white;
 // // @ui-badge-active-color: @ui-color-green;
