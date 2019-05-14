@@ -19,7 +19,7 @@ class LoadingBar extends Component {
 			// Fire timer function every 100th of duration time (ex: for a duration of 10000 ms, timer fn would fire every 1000 ms)
 			const intervalId = setInterval(this.timer, (this.props.duration / 100));
 
-			// Set intervalId in state in order to clear out timer
+			// Set intervalId in state in order to pass into clearInterval when component unmounts
 			this.setState({intervalId});
 		}, this.props.delay);
 	}
