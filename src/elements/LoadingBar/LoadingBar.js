@@ -40,12 +40,16 @@ class LoadingBar extends Component {
 		if(this.state.percentage === 100) {
 			// Once the the loader has filled, stop firing functionality and execute onComplete method
 			clearInterval(this.state.intervalId);
-			this.props.onComplete();
+
+			//Fire onComplete functionality if available
+			if(this.props.onComplete) {
+				this.props.onComplete();
+			}
 		}
 	}
 
 	render() {
-		//check here for percentage
+		// Check here for percentage from props or if it's populated in state (percent complete loading bar vs. timer loading bar)
 		const percentage = this.props.percentComplete ? this.props.percentComplete : this.state.percentage;
 
 		return (
@@ -61,7 +65,7 @@ LoadingBar.propTypes = {
 	percentComplete: PropTypes.number,
 	delay: PropTypes.number,
 	duration: PropTypes.number,
-	onComplete: PropTypes.func.isRequired
+	onComplete: PropTypes.func
 };
 
 LoadingBar.defaultProps = {
