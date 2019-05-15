@@ -8,7 +8,6 @@ import classNames from 'classnames';
 
 import Common from '../Common/Common';
 
-
 const Div = ({
 	children,
 	item,
