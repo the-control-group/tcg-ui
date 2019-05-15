@@ -6,10 +6,14 @@ import React from 'react';
 import classNames from 'classnames';
 
 import Common from '../Common/Common';
+import Icon from '../Icon/Icon';
 
-const Notification = ({ status, ...other }) => {
+
+
+
+const Notification = ({ status, message, ...other }) => {
 	const combinedClasses = classNames(
-		'status-badge',
+		'notification',
 		status,
 		other.classes,
 	);
@@ -20,16 +24,16 @@ const Notification = ({ status, ...other }) => {
 			tag="span"
 			{...other}
 		>
-			<span className="status-badge-dot" />
-			{status.toUpperCase()}
+			<Icon className="notification-icon" name={status} size={20} />
+			{message}
 		</Common>
 	);
 };
 
 Notification.propTypes = {
 	status: (props, propName, componentName) => {
-		if (!['active', 'paused', 'pending', 'archived'].includes(props.status)){
-			return new Error(`Invalid prop: ${componentName} must have a prop '${propName}' with a value of one of ['active', 'paused', 'pending', 'status']`);
+		if (!['success', 'failure', 'caution'].includes(props.status)){
+			return new Error(`Invalid prop: ${componentName} must have a prop '${propName}' with a value of one of ['success', 'failure', 'caution']`);
 		}
 	}
 };
