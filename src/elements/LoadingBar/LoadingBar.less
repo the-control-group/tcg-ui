@@ -1,8 +1,15 @@
+/**
+ * LoadingBar styles
+ */
+
+@ui-loading-bar-wrapper-height: @ui-small;
+@ui-loading-bar-margin-bottom: 20px;
+
 .ui-loading-bar-wrapper {
 	position: relative;
-	height: 16px;
+	height: @ui-loading-bar-wrapper-height;
 	overflow: hidden;
-	margin-bottom: 20px;
+	margin-bottom: @ui-loading-bar-margin-bottom;
 	background-color: @ui-color-slate;
 
 	.bar {
