@@ -6,7 +6,6 @@ class LoadingBar extends Component {
 		super(props);
 
 		this.state = {
-			type: null,
 			percentage: 0,
 			intervalId: null
 		};
@@ -15,7 +14,7 @@ class LoadingBar extends Component {
 	}
 
 	componentDidMount() {
-		if (this.props.type === 'timer') {
+		if (this.props.loadingBarType === 'timer') {
 			// Apply delay upon component mount
 			setTimeout(() => {
 				// Fire timer function every 100th of duration time (ex: for a duration of 10000 ms, timer fn would fire every 1000 ms)
@@ -61,7 +60,7 @@ class LoadingBar extends Component {
 }
 
 LoadingBar.propTypes = {
-	type: PropTypes.string.isRequired,
+	loadingBarType: PropTypes.string.isRequired,
 	percentComplete: PropTypes.number,
 	delay: PropTypes.number,
 	duration: PropTypes.number,

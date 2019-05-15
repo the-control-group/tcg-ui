@@ -10,14 +10,14 @@ storiesOf('LoadingBar', module)
 				<LoadingBar
 					delay={3000}
 					duration={10000}
-					type='timer'
+					loadingBarType='timer'
 					onComplete={()=>alert('onComplete function fired!')}
 				/>
 			</div>
 			<div>
 				<p>Completeness Loading Bar</p>
 				<LoadingBar
-					type='completeness'
+					loadingBarType='completeness'
 					percentComplete={60}
 				/>
 			</div>
