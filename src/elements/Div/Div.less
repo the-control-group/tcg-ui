@@ -13,6 +13,10 @@
 @ui-section-card-border-radius: 5px;
 @ui-section-card-section-border: 1px solid @ui-color-gray-light;
 
+// subsection variables
+@ui-subsection-card-margin: (@ui-section-card-padding * -1);
+
+
 .ui-div {
 	&.item {
 		padding: @ui-section-item-padding;
@@ -26,17 +30,17 @@
 		box-shadow: @ui-section-card-box-shadow;
 
 		.subsection {
-			margin-left: (@ui-section-card-padding * -1);
-			margin-right: (@ui-section-card-padding * -1);
+			margin-left: @ui-subsection-card-margin;
+			margin-right: @ui-subsection-card-margin;
 			padding: @ui-section-card-padding;
 			border-bottom: @ui-section-card-section-border;
 
 			&:first-of-type {
-				margin-top: (@ui-section-card-padding * -1);
+				margin-top: @ui-subsection-card-margin;
 			}
 
 			&:last-of-type {
-				margin-bottom: (@ui-section-card-padding * -1);
+				margin-bottom: @ui-subsection-card-margin;
 				border-bottom: none;
 			}
 		}
