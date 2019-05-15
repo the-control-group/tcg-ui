@@ -1,5 +1,5 @@
 /**
- * Status Badge
+ * Notification
  */
 
 import React from 'react';
@@ -7,9 +7,6 @@ import classNames from 'classnames';
 
 import Common from '../Common/Common';
 import Icon from '../Icon/Icon';
-
-
-
 
 const Notification = ({ status, message, ...other }) => {
 	const combinedClasses = classNames(
@@ -19,6 +16,7 @@ const Notification = ({ status, message, ...other }) => {
 	);
 
 	return (
+    // TODO: Add action button & onClick to the right of the message when an action is passed down
 		<Common
 			classes={combinedClasses}
 			tag="span"
