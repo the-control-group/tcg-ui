@@ -6,6 +6,7 @@ class LoadingBar extends Component {
 		super(props);
 
 		this.state = {
+			type: null,
 			percentage: 0,
 			intervalId: null
 		};
@@ -14,14 +15,16 @@ class LoadingBar extends Component {
 	}
 
 	componentDidMount() {
-		// Apply delay upon component mount
-		setTimeout(() => {
-			// Fire timer function every 100th of duration time (ex: for a duration of 10000 ms, timer fn would fire every 1000 ms)
-			const intervalId = setInterval(this.timer, (this.props.duration / 100));
+		if (this.props.type === 'timer') {
+			// Apply delay upon component mount
+			setTimeout(() => {
+				// Fire timer function every 100th of duration time (ex: for a duration of 10000 ms, timer fn would fire every 1000 ms)
+				const intervalId = setInterval(this.timer, (this.props.duration / 100));
 
-			// Set intervalId in state in order to pass into clearInterval when component unmounts
-			this.setState({intervalId});
-		}, this.props.delay);
+				// Set intervalId in state in order to pass into clearInterval when component unmounts
+				this.setState({intervalId});
+			}, this.props.delay);
+		}
 	}
 
 	componentWillUnmount() {
@@ -42,15 +45,20 @@ class LoadingBar extends Component {
 	}
 
 	render() {
+		//check here for percentage
+		const percentage = this.props.percentComplete ? this.props.percentComplete : this.state.percentage;
+
 		return (
 			<div className="ui-loading-bar-wrapper">
-				<div className="bar" style={{width: this.state.percentage + '%'}} />
+				<div className="bar" style={{width: percentage + '%'}} />
 			</div>
 		);
 	}
 }
 
 LoadingBar.propTypes = {
+	type: PropTypes.string.isRequired,
+	percentComplete: PropTypes.number,
 	delay: PropTypes.number,
 	duration: PropTypes.number,
 	onComplete: PropTypes.func.isRequired
