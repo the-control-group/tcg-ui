@@ -8,30 +8,31 @@ import classNames from 'classnames';
 
 import Common from '../Common/Common';
 
-const StatusBadge = ({ children, active, paused, pending, archived, ...other }) => {
-
+const StatusBadge = ({ status, ...other }) => {
 	const combinedClasses = classNames(
-		'status-badge',
-		active && 'active',
-		paused && 'paused',
-		pending && 'pending',
-		archived && 'archived',
+    'status-badge',
+    status,
 		other.classes,
 	);
 
 	return (
 		<Common
-			{...other}
-			classes={combinedClasses}
-			tag="span"
+    classes={combinedClasses}
+    tag="span"
+    {...other}
       >
       <span className="status-badge-dot" />
-			{active && 'ACTIVE'}
-			{paused && 'PAUSED'}
-			{pending && 'PENDING'}
-			{archived && 'ARCHIVED'}
+			{status.toUpperCase()}
 		</Common>
 	);
 };
+
+StatusBadge.PropTypes = {
+  status: (props, propName, componentName) => {
+    if (!['active', 'paused', 'pending', 'archived'].includes(props.status)){
+      return new Error(`Invalid prop: must have a prop 'status' with a value of one of ['active', 'paused', 'pending', 'status']`);
+    }
+  }
+}
 
 export default StatusBadge;
