@@ -7,6 +7,11 @@
  @ui-status-badge-dot-size: 12px;
  @ui-status-badge-font-family: @ui-font-sans-serif;
 
+ @ui-status-badge-active-color: @ui-color-green;
+ @ui-status-badge-paused-color: @ui-color-red;
+ @ui-status-badge-pending-color: @ui-color-yellow;
+ @ui-status-badge-archived-color: @ui-color-gray-dark;
+
  .status-badge {
    display: inline-block;
    border: @ui-status-badge-border;
@@ -24,34 +29,34 @@
    }
    
    &.active {
-     border-color: @ui-color-green;
+     border-color: @ui-status-badge-active-color;
  
      .status-badge-dot {
-       background-color: @ui-color-green;
+       background-color: @ui-status-badge-active-color;
      }
    }
  
    &.paused {
-     border-color: @ui-color-red;
+     border-color: @ui-status-badge-paused-color;
  
      .status-badge-dot {
-       background-color: @ui-color-red;
+       background-color: @ui-status-badge-paused-color;
      }
    }
  
    &.pending {
-     border-color: @ui-color-yellow;
+     border-color: @ui-status-badge-pending-color;
  
      .status-badge-dot {
-       background-color: @ui-color-yellow;
+       background-color: @ui-status-badge-pending-color;
      }
    }
  
    &.archived {
-     border-color: @ui-color-gray-dark;
+     border-color: @ui-status-badge-archived-color;
  
      .status-badge-dot {
-       background-color: @ui-color-gray-dark;
+       background-color: @ui-status-badge-archived-color;
      }
    }
  }
