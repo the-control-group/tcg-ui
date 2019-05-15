@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import Common from '../Common/Common';
@@ -16,7 +17,7 @@ const Notification = ({ status, message, ...other }) => {
 	);
 
 	return (
-    // TODO: Add action button & onClick to the right of the message when an action is passed down
+	// TODO: Add action button & onClick to the right of the message when an action is passed down
 		<Common
 			classes={combinedClasses}
 			tag="span"
@@ -33,7 +34,8 @@ Notification.propTypes = {
 		if (!['success', 'failure', 'caution'].includes(props.status)){
 			return new Error(`Invalid prop: ${componentName} must have a prop '${propName}' with a value of one of ['success', 'failure', 'caution']`);
 		}
-	}
+	},
+	message: PropTypes.string.isRequired
 };
 
 export default Notification;
