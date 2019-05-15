@@ -9,7 +9,7 @@ import classNames from 'classnames';
 import Common from '../Common/Common';
 import Icon from '../Icon/Icon';
 
-const Notification = ({ status, message, ...other }) => {
+const Notification = ({ status, message, action, onClick, ...other }) => {
 	const combinedClasses = classNames(
 		'notification',
 		status,
@@ -25,6 +25,7 @@ const Notification = ({ status, message, ...other }) => {
 		>
 			<Icon className="notification-icon" name={status} size={20} />
 			{message}
+			{action && <span className="action" onClick={onClick}>{action}</span>}
 		</Common>
 	);
 };
@@ -35,7 +36,22 @@ Notification.propTypes = {
 			return new Error(`Invalid prop: ${componentName} must have a prop '${propName}' with a value of one of ['success', 'failure', 'caution']`);
 		}
 	},
-	message: PropTypes.string.isRequired
+	message: PropTypes.string.isRequired,
+	action: PropTypes.string,
+	onClick: (props, propName, componentName) => {
+		if (!props.action) {
+			// if no action is given, we don't need an onClick
+			return;
+		}
+
+		if (!props.onClick) {
+			return new Error(`Invalid prop: When given a prop 'action', ${componentName} must have a prop 'onClick'`);
+		}
+    
+		if (typeof props.onClick !== 'function') {
+			return new Error(`Invalid prop: When given a prop 'action', ${componentName} must have a prop 'onClick' that is a function`);
+		} 
+	}
 };
 
 export default Notification;

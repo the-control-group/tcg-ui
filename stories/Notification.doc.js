@@ -22,5 +22,33 @@ storiesOf('Notification', module).add('Status Badge', () => (
       status="failure"
       message="This is a failure message."
     />
+    <br />
+    <br />
+    <br />
+    
+    <Notification
+      status="success"
+      message="Added role ‘TCG Developer’ to 46 users."
+      action="Undo"
+      onClick={() => {alert('Undone')}}
+    />
+    <br />
+    <br />
+    <br />
+    <Notification
+      status="caution"
+      message="Lost connection to database."
+      action="Reconnect"
+      onClick={() => {alert('Reconnecting')}}
+      />
+      <br />
+      <br />
+      <br />
+      <Notification
+      status="failure"
+      message="Failed to archive 46 users."
+      action="Try again"
+      onClick={() => {alert('Trying again')}}
+    />
   </div>
 ));
