@@ -2,58 +2,62 @@
  * StatusBadge styles
  */
 
-@ui-status-badge-border: 1px solid;
-@ui-infinite-border-radius: 1000px;
+ @ui-status-badge-border: 1px solid;
+ @ui-status-badge-border-radius: 1000px;
+ @ui-status-badge-dot-size: 12px;
+ @ui-status-badge-font-family: @ui-font-sans-serif;
 
-.status-badge {
-  .status-badge-dot {
-    @status-badge-dot-size: 12px;
-    height: @status-badge-dot-size;
-    width: @status-badge-dot-size;
-    border-radius: @ui-infinite-border-radius;
-    display: inline-block;
-    margin-right: @base-spacing-unit;
-  }
-  
-  display: inline-block;
-  border: @ui-status-badge-border;
-  border-radius: @ui-infinite-border-radius;
-  padding: @ui-xx-small @base-spacing-unit;
-  font-family: @ui-font-sans-serif;
-  
-  &.active {
-    color: @ui-color-white;
-    border-color: @ui-color-green;
+ @ui-status-badge-active-color: @ui-color-green;
+ @ui-status-badge-paused-color: @ui-color-red;
+ @ui-status-badge-pending-color: @ui-color-yellow;
+ @ui-status-badge-archived-color: @ui-color-gray-dark;
 
-    .status-badge-dot {
-      background-color: @ui-color-green;
-    }
-  }
-
-    &.paused {
-    color: @ui-color-white;
-    border-color: @ui-color-red;
-
-    .status-badge-dot {
-      background-color: @ui-color-red;
-    }
-  }
-
-    &.pending {
-    color: @ui-color-white;
-    border-color: @ui-color-yellow;
-
-    .status-badge-dot {
-      background-color: @ui-color-yellow;
-    }
-  }
-
-    &.archived {
-    color: @ui-color-white;
-    border-color: @ui-color-gray-dark;
-
-    .status-badge-dot {
-      background-color: @ui-color-gray-dark;
-    }
-  }
-}
+ .status-badge {
+   display: inline-block;
+   border: @ui-status-badge-border;
+   border-radius: @ui-status-badge-border-radius;
+   padding: @ui-xx-small @ui-x-small;
+   font-family: @ui-status-badge-font-family;
+   color: @ui-color-white;
+   
+   .status-badge-dot {
+     height: @ui-status-badge-dot-size;
+     width: @ui-status-badge-dot-size;
+     border-radius: @ui-status-badge-border-radius;
+     display: inline-block;
+     margin-right: @ui-x-small;
+   }
+   
+   &.active {
+     border-color: @ui-status-badge-active-color;
+ 
+     .status-badge-dot {
+       background-color: @ui-status-badge-active-color;
+     }
+   }
+ 
+   &.paused {
+     border-color: @ui-status-badge-paused-color;
+ 
+     .status-badge-dot {
+       background-color: @ui-status-badge-paused-color;
+     }
+   }
+ 
+   &.pending {
+     border-color: @ui-status-badge-pending-color;
+ 
+     .status-badge-dot {
+       background-color: @ui-status-badge-pending-color;
+     }
+   }
+ 
+   &.archived {
+     border-color: @ui-status-badge-archived-color;
+ 
+     .status-badge-dot {
+       background-color: @ui-status-badge-archived-color;
+     }
+   }
+ }
+ 
