@@ -7,5 +7,8 @@ export { default as Notification } from './elements/Notification/Notification';
 export { default as LoadingBar } from './elements/LoadingBar/LoadingBar';
 export { default as Chip } from './elements/Chip/Chip';
 
+export { default as ToggleSwitch } from './elements/ToggleSwitch/ToggleSwitch';
+
+
 export { getBreakpoint } from './util/helpers';
 export { isMobile } from './util/helpers';
