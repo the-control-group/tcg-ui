@@ -4,14 +4,15 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-//import classNames from 'classnames';
+import Icon from '../Icon/Icon';
+
 
 const Chip = ({clickHandler, message}) => {
 	return (
-		<div className="chip-wrapper">
-			<p>{message}
-				<span onClick={()=>clickHandler()}>
-				</span>
+		<div className="ui-chip-wrapper">
+			<p>
+				<span>{message}</span>
+				<Icon name="exit" onClick={clickHandler}/>
 			</p>
 		</div>
 	);
