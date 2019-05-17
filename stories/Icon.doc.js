@@ -6,5 +6,7 @@ storiesOf('Icon', module)
 	.add('Icon', () => (
 		<div>
 			<Icon name="email" size={15} />
+			<br/>
+			<Icon name="exit" size={15} />
 		</div>
 	));
