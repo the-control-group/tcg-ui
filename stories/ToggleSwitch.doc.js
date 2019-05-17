@@ -24,7 +24,7 @@ storiesOf('ToggleSwitch', module)
 			<span>"disabled"</span>
 			<div>
 				<ToggleSwitch
-					handleClick={()=>alert('disabled!')}
+					handleClick={()=>alert('this should not fire!')}
 					toggled={false}
 					disabled={true}
 				/>
