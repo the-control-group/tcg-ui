@@ -8,10 +8,10 @@ storiesOf('DestructiveDialog', module)
 			<DestructiveDialog
 				title="Title"
 				content="Supporting message goes here. Ex: This will add 20 users."
-				leftButtonClickHandler={()=>alert('click handler for left button fired!')}
-				leftButtonContent="Button"
-				rightButtonClickHandler={()=>alert('click handler for right button fired!')}
-				rightButtonContent="Button"
+				primaryActionClickHandler={()=>alert('click handler for primary action button fired!')}
+				primaryActionContent="Button"
+				secondaryActionClickHandler={()=>alert('click handler for secondary action button fired!')}
+				secondaryActionContent="Button"
 			/>
 		</div>
 	));

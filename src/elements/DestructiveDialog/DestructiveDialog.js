@@ -6,27 +6,29 @@ import Button from '../Button/Button';
 const DestructiveDialog = ({
 	title,
 	content,
-	leftButtonClickHandler,
-	leftButtonContent,
-	rightButtonClickHandler,
-	rightButtonContent}) => {
+	height = 128,
+	width = 280,
+	primaryActionClickHandler,
+	primaryActionContent,
+	secondaryActionClickHandler,
+	secondaryActionContent}) => {
 //TODO: Switch out h1/p elements to utilize Text component when ready
 	return(
-		<div className="ui-destructive-dialog-container">
+		<div className="ui-destructive-dialog-container" style={{height, width}}>
 			<h1 className="destructive-dialog-title">{title}</h1>
 			<p className="destructive-dialog-content">{content}</p>
 			<div className="destructive-dialog-button-wrapper">
 				<Button
-					onClick={leftButtonClickHandler}
+					onClick={primaryActionClickHandler}
 					bare
 				>
-					{leftButtonContent}
+					{primaryActionContent}
 				</Button>
 				<Button
-					onClick={rightButtonClickHandler}
+					onClick={secondaryActionClickHandler}
 					bare
 				>
-					{rightButtonContent}
+					{secondaryActionContent}
 				</Button>
 			</div>
 		</div>
@@ -36,10 +38,12 @@ const DestructiveDialog = ({
 DestructiveDialog.propTypes = {
 	title: PropTypes.string.isRequired,
 	content: PropTypes.string.isRequired,
-	leftButtonClickHandler: PropTypes.func.isRequired,
-	leftButtonContent: PropTypes.string.isRequired,
-	rightButtonClickHandler: PropTypes.func.isRequired,
-	rightButtonContent: PropTypes.string.isRequired
+	height: PropTypes.number,
+	width: PropTypes.number,
+	primaryActionClickHandler: PropTypes.func.isRequired,
+	primaryActionContent: PropTypes.string.isRequired,
+	secondaryActionClickHandler: PropTypes.func.isRequired,
+	secondaryActionContent: PropTypes.string.isRequired
 };
 
 export default DestructiveDialog;
