@@ -1,3 +1,5 @@
+export { default as FlexRow } from './elements/FlexRow/FlexRow';
+export { default as Flex } from './elements/Flex/Flex';
 export { default as Button } from './elements/Button/Button';
 export { default as Icon } from './elements/Icon/Icon';
 export { default as StatusBadge } from './elements/StatusBadge/StatusBadge';
