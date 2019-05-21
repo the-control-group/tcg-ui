@@ -2,8 +2,31 @@
  * Destructive Dialog styles
  */
 
- @ui-destructive-dialog-font-family: @ui-font-body;
+ @ui-destructive-dialog-font: @ui-font-sans-serif;
+ @ui-destructive-dialog-letter-spacing: 0.02em;
 
 .ui-destructive-dialog-container {
-	font-family: @ui-destructive-dialog-font-family;
+	font-family:  @ui-destructive-dialog-font;
+	letter-spacing:  @ui-destructive-dialog-letter-spacing;
+	height: 186px;
+	width: 280px;
+
+	.destructive-dialog-title {
+		font-size: 20px;
+	}
+
+	.destructive-dialog-content {
+		color: @ui-color-gray-dark;
+		font-size: 16px;
+	}
+
+	.destructive-dialog-button-wrapper {
+		position: relative;
+		left: 100px;
+
+		button {
+			margin-right: 20px;
+		}
+	}
+
 }

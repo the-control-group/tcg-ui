@@ -17,18 +17,20 @@ const DestructiveDialog = ({
 		<div className="ui-destructive-dialog-container">
 			<h1 className="destructive-dialog-title">{title}</h1>
 			<p className="destructive-dialog-content">{content}</p>
-			<Button
-				onClick={leftButtonClickHandler}
-				bare
-			>
-				{leftButtonContent}
-			</Button>
-			<Button
-				onClick={rightButtonClickHandler}
-				bare
-			>
-				{rightButtonContent}
-			</Button>
+			<div className="destructive-dialog-button-wrapper">
+				<Button
+					onClick={leftButtonClickHandler}
+					bare
+				>
+					{leftButtonContent}
+				</Button>
+				<Button
+					onClick={rightButtonClickHandler}
+					bare
+				>
+					{rightButtonContent}
+				</Button>
+			</div>
 		</div>
 	);
 };
