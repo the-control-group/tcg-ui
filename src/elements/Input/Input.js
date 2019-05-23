@@ -10,7 +10,8 @@ const Input = ({
 	id,
 	type,
 	checked,
-	classes
+	classes,
+	...other
 }) => {
 	const combinedClasses = classNames(
 		'ui-input',
@@ -28,6 +29,7 @@ const Input = ({
 				id={id}
 				tag="input"
 				classes={combinedClasses}
+				{...other}
 			/>
 			<label
 				className="ui-input-label"

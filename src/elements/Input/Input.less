@@ -1,13 +1,37 @@
-.ui-input-container {
-	font: @ui-font-sans-serif;
+.ui-input {
 
-	.checkmark {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 25px;
-		width: 25px;
-		background-color: @ui-color-slate;
+	// Checkbox Styling
+	&[type="checkbox"] {
+		opacity: 0; // Hide default
+
+		& + label:before {
+			position: relative;
+			content: '';
+			margin-right: 10px;
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			background: @ui-color-slate;
+			border-radius: 2px;
+		  }
+		// Add bottom and left borders and rotate to make it look like a checkmark
+		&:checked {
+		& + label::after {
+				position: absolute;
+				content: "";
+				display: inline-block;
+				height: 6px;
+				width: 9px;
+				left: 34px;
+				margin-top: 6px;
+				border-left: 2px solid @ui-color-white;
+				border-bottom: 2px solid @ui-color-white;
+				transform: rotate(-45deg);
+			}
+		}
 	}
+}
 
+.ui-input-label {
+	font-family: @ui-font-sans-serif;
 }
