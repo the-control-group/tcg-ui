@@ -30,15 +30,17 @@ storiesOf('Input', module)
 			<br/>
 			<br/>
 			<Input
-				label="radio"
+				label="this is a radio example"
 				name="radio-example"
 				type="radio"
+				id="example-4"
 			/>
 			<br/>
 			<Input
-				label="radio"
+				label="these are the labels"
 				name="radio-example"
 				type="radio"
+				id="example-5"
 			/>
 		</div>
 	));

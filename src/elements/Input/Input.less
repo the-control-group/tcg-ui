@@ -14,22 +14,54 @@
 			background: @ui-color-slate;
 			border-radius: 2px;
 		  }
-		// Add bottom and left borders and rotate to make it look like a checkmark
+
+		// Add bottom and left borders and rotate to make pseudo element look like a checkmark
 		&:checked {
-		& + label::after {
-				position: absolute;
-				content: "";
-				display: inline-block;
-				height: 6px;
-				width: 9px;
-				left: 34px;
-				margin-top: 6px;
-				border-left: 2px solid @ui-color-white;
-				border-bottom: 2px solid @ui-color-white;
-				transform: rotate(-45deg);
-			}
+			& + label::after {
+					position: absolute;
+					content: "";
+					display: inline-block;
+					height: 6px;
+					width: 9px;
+					left: 34px;
+					margin-top: 6px;
+					border-left: 2px solid @ui-color-white;
+					border-bottom: 2px solid @ui-color-white;
+					transform: rotate(-45deg);
+				}
 		}
 	}
+
+	&[type="radio"] {
+		opacity: 0;
+
+		& + label:before {
+			position: relative;
+			content: '';
+			margin-right: 10px;
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			background: #121212;
+			border-radius: 50px;
+			border: solid 4px @ui-color-blue;
+		  }
+
+		  &:checked {
+  			& + label::after {
+  					position: absolute;
+  					content: "";
+  					display: inline-block;
+				    height: 15px;
+				    width: 15px;
+				    left: 34.5px;
+				    margin-top: 8px;
+				    background-color: @ui-color-blue;
+				    border-radius: 50%;
+  				}
+  		}
+	}
+
 }
 
 .ui-input-label {
