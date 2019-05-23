@@ -8,27 +8,23 @@ storiesOf('Input', module)
 			<Input
 				label="this is a label"
 				name="doc"
-				handleChange={()=>alert('change')}
-				defaultValue={false}
 				type="checkbox"
+				id="example-1"
 			/>
+			<br/>
 			<Input
 				label="this is another label"
 				name="doc2"
-				handleChange={()=>alert('switched to this one')}
-				defaultValue={false}
 				type="checkbox"
+				id="example-2"
 			/>
+			<br/>
 			<Input
 				label="this is the last label"
 				name="doc3"
-				handleChange={()=>alert('switched to this one')}
-				defaultValue={false}
 				type="checkbox"
+				id="example-3"
 			/>
-			<br/>
-			<br/>
-			<br/>
 			<br/>
 			<br/>
 			<br/>
@@ -36,15 +32,12 @@ storiesOf('Input', module)
 			<Input
 				label="radio"
 				name="radio-example"
-				handleChange={()=>alert('switched to this one')}
-				defaultValue={true}
 				type="radio"
 			/>
+			<br/>
 			<Input
 				label="radio"
 				name="radio-example"
-				handleChange={()=>alert('switched to this one')}
-				defaultValue={false}
 				type="radio"
 			/>
 		</div>
