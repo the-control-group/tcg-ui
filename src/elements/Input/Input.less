@@ -10,27 +10,61 @@
 			content: '';
 			margin-right: 10px;
 			display: inline-block;
-			width: 24px;
-			height: 24px;
-			background: @ui-color-slate;
-			border-radius: 2px;
+			width: 20px;
+			height: 20px;
+			border: solid @ui-color-blue;
+    		border-radius: 3px;
+    		border-width: 3px;
+		  }
+
+		  & + label.remove.inverse::before {
+			  background-color: @ui-color-gray-light;
+			  border: solid @ui-color-gray-light;
 		  }
 
 		// Add bottom and left borders and rotate to make pseudo element look like a checkmark
 		&:checked {
+			& + label::before {
+				background-color: @ui-color-blue;
+			}
+
 			& + label::after {
 					position: absolute;
 					content: "";
 					display: inline-block;
-					height: 6px;
-					width: 9px;
+					height: 7px;
+					width: 10px;
 					left: 34px;
-					margin-top: 11px;
-					border-left: 2px solid @ui-color-white;
-					border-bottom: 2px solid @ui-color-white;
+					margin-top: 13px;
+					border-left: 3px solid #121212;
+					border-bottom: 3px solid #121212;
 					transform: rotate(-45deg);
 				}
+
+			// Custom styling for the "-" character in the checkbox
+			& + label.remove::before {
+				background-color: @ui-color-gray-light;
+				border: solid @ui-color-gray-light;
+	    		border-radius: 3px;
+	    		border-width: 3px;
+			}
+
+			& + label.remove::after	{
+				border-bottom: 3px solid @ui-color-white;
+				margin-top: 12px;
+				border-left: none;
+				transform: none;
+			}
+
+
+			//Custom styling for inverse colorway for remove state
+			& + label.remove.inverse::after	{
+				border-bottom: 3px solid @ui-color-slate;
+				border-left: none;
+				transform: none;
+			}
 		}
+
 	}
 
 	&[type="radio"] {
@@ -57,7 +91,7 @@
 				    height: 15px;
 				    width: 15px;
 				    left: 34.5px;
-				    margin-top: 16px;
+					margin-top: 16px;
 				    background-color: @ui-color-blue;
 				    border-radius: 50%;
   				}

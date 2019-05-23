@@ -3,6 +3,31 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Common from '../Common/Common';
 
+const Label = ({
+	classes,
+	content,
+	inverse,
+	remove, // Shows "-" character in the checkbox rather than a checkmark
+	htmlFor
+}) => {
+	const labelClasses = classNames(
+		'ui-input-label',
+		{remove},
+		{inverse},
+		classes
+	);
+
+	return (
+		<Common
+			tag="label"
+			classes={labelClasses}
+			htmlFor={htmlFor}
+		>
+			{content}
+		</Common>
+	);
+};
+
 const Input = ({
 	inverse, // Opposite colorway
 	label,
@@ -10,13 +35,13 @@ const Input = ({
 	id,
 	type,
 	checked,
+	remove, // Shows "-" character in the checkbox rather than a checkmark
 	classes,
 	...other
 }) => {
 	const combinedClasses = classNames(
 		'ui-input',
-		classes,
-		{inverse}
+		classes
 	);
 
 	return (
@@ -31,16 +56,25 @@ const Input = ({
 				classes={combinedClasses}
 				{...other}
 			/>
-			<label
-				className="ui-input-label"
+			<Label
 				htmlFor={id}
-			>
-				{label}
-			</label>
+				content={label}
+				classes={combinedClasses}
+				remove={remove}
+				inverse={inverse}
+			/>
 		</Fragment>
 	);
 };
 
+
+Label.propTypes = {
+	content: PropTypes.string,
+	htmlFor: PropTypes.string,
+	classes: PropTypes.object,
+	remove: PropTypes.boolean,
+	inverse: PropTypes.boolean
+};
 
 Input.propTypes = {
 	inverse: PropTypes.boolean,
@@ -50,7 +84,8 @@ Input.propTypes = {
 	name: PropTypes.string,
 	handleChange: PropTypes.function,
 	id: PropTypes.string,
-	classes: PropTypes.object
+	classes: PropTypes.object,
+	remove: PropTypes.boolean
 };
 
 

@@ -26,6 +26,14 @@ storiesOf('Input', module)
 				id="example-3"
 			/>
 			<br/>
+			<Input
+				label="this indicates selection for removal with inverted colors"
+				name="doc3"
+				remove={true}
+				inverse={true}
+				type="checkbox"
+				id="example-4"
+			/>
 			<br/>
 			<br/>
 			<br/>
@@ -33,14 +41,14 @@ storiesOf('Input', module)
 				label="this is a radio example"
 				name="radio-example"
 				type="radio"
-				id="example-4"
+				id="example-5"
 			/>
 			<br/>
 			<Input
 				label="these are the labels"
 				name="radio-example"
 				type="radio"
-				id="example-5"
+				id="example-6"
 			/>
 		</div>
 	));
