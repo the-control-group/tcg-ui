@@ -6,7 +6,7 @@ import Common from '../Common/Common';
 const Label = ({
 	classes,
 	content,
-	inverse,
+	inverse, // Opposite color scheme
 	remove, // Shows "-" character in the checkbox rather than a checkmark
 	htmlFor
 }) => {
@@ -29,7 +29,7 @@ const Label = ({
 };
 
 const Input = ({
-	inverse, // Opposite colorway
+	inverse, // Opposite color scheme
 	label,
 	name,
 	id,
