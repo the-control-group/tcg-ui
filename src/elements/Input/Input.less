@@ -1,0 +1,111 @@
+.ui-input {
+
+	// Checkbox Styling
+	&[type="checkbox"] {
+		opacity: 0; // Hide default
+
+		& + label:before {
+			position: relative;
+			top: 6px;
+			content: '';
+			margin-right: 10px;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background-color: transparent;
+			border: solid @ui-color-blue;
+    		border-radius: 3px;
+    		border-width: 3px;
+		  }
+
+		  & + label.remove.inverse::before {
+			  background-color: @ui-color-gray-light;
+			  border: solid @ui-color-gray-light;
+		  }
+
+		// Add bottom and left borders and rotate to make pseudo element look like a checkmark
+		&:checked {
+			& + label::before {
+				background-color: @ui-color-blue;
+			}
+
+			& + label::after {
+					position: absolute;
+					content: "";
+					display: inline-block;
+					height: 7px;
+					width: 10px;
+					left: 34px;
+					margin-top: 13px;
+					border-left: 3px solid @ui-color-white;
+					border-bottom: 3px solid @ui-color-white;
+					transform: rotate(-45deg);
+				}
+
+			// Custom styling for the "-" character in the checkbox
+			& + label.remove::before {
+				background-color: @ui-color-blue;
+				border: solid @ui-color-blue;
+	    		border-radius: 3px;
+	    		border-width: 3px;
+			}
+
+			& + label.remove::after	{
+				border-bottom: 3px solid @ui-color-white;
+				margin-top: 12px;
+				border-left: none;
+				transform: none;
+			}
+
+			//Custom styling for inverse colorway for remove state
+			& + label.remove.inverse::before {
+				background-color: @ui-color-gray-light;
+				border: solid @ui-color-gray-light;
+	    		border-radius: 3px;
+	    		border-width: 3px;
+			}
+
+			& + label.remove.inverse::after	{
+				border-bottom: 3px solid @ui-color-slate;
+				border-left: none;
+				transform: none;
+			}
+		}
+	}
+
+	// Radio selector styling
+	&[type="radio"] {
+		opacity: 0;
+
+		& + label:before {
+			position: relative;
+			top: 8px;
+			content: '';
+			margin-right: 10px;
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			background-color: transparent;
+			border-radius: 50%;
+			border: solid 4px @ui-color-blue;
+		  }
+
+		  &:checked {
+  			& + label::after {
+  					position: absolute;
+  					content: "";
+  					display: inline-block;
+				    height: 15px;
+				    width: 15px;
+				    left: 34.5px;
+					margin-top: 16px;
+				    background-color: @ui-color-blue;
+				    border-radius: 50%;
+  				}
+  		}
+	}
+}
+
+.ui-input-label {
+	font-family: @ui-font-sans-serif;
+}
