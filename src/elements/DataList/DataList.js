@@ -42,7 +42,21 @@ const DataListRow = ({ text, ...other }) => {
 }
 
 DataList.propTypes = {
-  rows: PropTypes.arrayOf(PropTypes.string).isRequired,
+  rows: (props, propName, componentName) => {
+    const err = new Error(`Invalid prop: ${componentName} must have a prop '${propName}' which must be a non-empty array of strings`);
+
+    if(!Array.isArray(props.rows)) {
+			return err;
+    }
+
+    if(props.rows.length < 1) {
+			return err;
+    }
+
+    if (!props.rows.every(entry => typeof entry === 'string')) {
+			return err;
+    }
+  },
   // onClick: (props, propName, componentName) => {
 	// 	if (!props.onClick) {
 	// 		return new Error(`Invalid prop: When given a prop 'action', ${componentName} must have a prop 'onClick'`);

@@ -8,7 +8,13 @@ storiesOf('DataList', module)
 			<div>
 				<DataList
 					// onClick={()=>alert('Clicked!')}
-          rows={['Data Entry','Data Entry','Data Entry']}
+          rows={[
+            'Data Entry',
+            'Data Entry',
+            'Data Entry',
+            'Data Entry',
+            'Data Entry',
+          ]}
           label="Label"
 				/>
 			</div>
