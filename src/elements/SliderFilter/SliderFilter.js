@@ -10,19 +10,20 @@ class SliderFilter extends Component {
 	}
 
 	render() {
+		const { name } = this.props;
+
 		return (
-			<div></div>
-		)
+			<div className="ui-slider-filter-container">
+				<input className="slider" type="range" name={name} min="0" max="100"/>
+				{this.state.position}
+			</div>
+		);
 	}
 }
 
 
 SliderFilter.propTypes = {
-	loadingBarType: PropTypes.string.isRequired,
-	percentComplete: PropTypes.number,
-	delay: PropTypes.number,
-	duration: PropTypes.number,
-	onComplete: PropTypes.func
+	name: PropTypes.string.isRequired
 };
 
 

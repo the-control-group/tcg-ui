@@ -1,0 +1,31 @@
+.ui-slider-filter-container {
+	.slider {
+		-webkit-appearance: none;  // Override default CSS styles
+		width: 160px;
+		height: 8px;
+  		appearance: none;
+  		background: #d3d3d3;
+  		outline: none; // Remove outline
+		background-color: @ui-color-slate;
+  		-webkit-transition: .2s;
+  		transition: opacity .2s;
+	}
+
+	.slider::-webkit-slider-thumb {
+  		-webkit-appearance: none;
+  		appearance: none;
+		border-radius: 50%;
+  		width: 16px;
+  		height: 16px;
+		background: @ui-color-white;
+  		cursor: pointer;
+	}
+
+	.slider::-moz-range-thumb {
+	  width: 16px;
+	  height: 16px;
+	  background: @ui-color-white;
+	  cursor: pointer;
+	}
+
+}

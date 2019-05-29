@@ -10,6 +10,7 @@ export { default as ToggleSwitch } from './elements/ToggleSwitch/ToggleSwitch';
 export { default as DestructiveDialog } from './elements/DestructiveDialog/DestructiveDialog';
 export { default as Input } from './elements/Input/Input';
 export { default as DataList } from './elements/DataList/DataList';
+export { default as SliderFilter } from './elements/SliderFilter/SliderFilter';
 
 
 export { getBreakpoint } from './util/helpers';
