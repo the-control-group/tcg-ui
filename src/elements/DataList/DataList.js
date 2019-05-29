@@ -1,5 +1,5 @@
 /**
- * Status Badge
+ * Data List
  */
 
 import React, { Fragment } from 'react';
