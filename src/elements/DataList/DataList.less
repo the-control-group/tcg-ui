@@ -2,5 +2,25 @@
 
 .data-list {
   font-family: @ui-font-sans-serif;
-  
+  max-width: 300px;
+
+  hr {
+    background-color: @ui-color-gray-medium;
+    height: 1px;
+    border: none;
+  }
+
+  .label {
+    color: @ui-color-slate;
+    @ui-font-body-alt();
+  }
+
+  .data-list-item {
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+      margin-right: @ui-x-small;
+    }
+  }
 }

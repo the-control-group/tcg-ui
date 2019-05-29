@@ -7,8 +7,9 @@ storiesOf('DataList', module)
 		<div>
 			<div>
 				<DataList
-					// handleClick={()=>alert('enabled!')}
-					rows={['Data Entry','Data Entry','Data Entry']}
+					// onClick={()=>alert('Clicked!')}
+          rows={['Data Entry','Data Entry','Data Entry']}
+          label="Label"
 				/>
 			</div>
 		</div>
