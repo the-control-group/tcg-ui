@@ -8,8 +8,8 @@
  ],
  "scripts": {
   "storybook": "start-storybook",
-  "start": "cpx \"src/**/*.{less,js}\" lib --watch",
-  "copy": "rm -rf lib/ && cpx \"src/**/*.{less,js}\" lib",
+  "start": "cpx \"src/**/*.{less,js,svg}\" lib --watch",
+  "copy": "rm -rf lib/ && cpx \"src/**/*.{less,js,svg}\" lib",
   "test": "eslint src",
   "prepublishOnly": "npm test && npm run copy"
  },
