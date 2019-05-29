@@ -33,7 +33,7 @@ const DataListRow = ({ text, ...other }) => {
     <Fragment>
       <div className="data-list-item">
         <span>{text}</span>
-        <Icon name="close-blue" size={14} />
+        <Icon name="close-blue" height={14} width={30} />
       </div>
       <hr />
     </Fragment>
