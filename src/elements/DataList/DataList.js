@@ -23,7 +23,7 @@ const DataList = ({ rows, label, ...other }) => {
     >
       <label className="label">{label}</label>
       <hr />
-			{rows.map(text => <DataListRow text={text} />)}
+			{rows.map((text, index) => <DataListRow key={index} text={text} />)}
 		</Common>
 	);
 };
@@ -33,7 +33,7 @@ const DataListRow = ({ text, ...other }) => {
     <Fragment>
       <div className="data-list-item">
         <span>{text}</span>
-        <Icon name="close-blue" />
+        <Icon name="close-blue" size={14} />
       </div>
       <hr />
     </Fragment>

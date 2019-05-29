@@ -13,7 +13,7 @@ storiesOf('DataList', module)
             'Data Entry',
             'Data Entry',
             'Data Entry',
-            'Data Entry',
+            'This data entry is too long to fit on one line, so it wraps.',
           ]}
           label="Label"
 				/>
