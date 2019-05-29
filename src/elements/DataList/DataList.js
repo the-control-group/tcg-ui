@@ -23,27 +23,26 @@ const DataList = ({ rows, label, ...other }) => {
     >
       <label className="label">{label}</label>
       <hr />
-			{rows.map((text, index) => <DataListRow key={index} text={text} />)}
+			{rows.map((data, index) => <DataListRow key={index} data={data} />)}
 		</Common>
 	);
 };
 
-const DataListRow = ({ text, ...other }) => {
+const DataListRow = ({ data, ...other }) => {
   return (
     <Fragment>
       <div className="data-list-item">
-        <span>{text}</span>
-        <Icon name="close-blue" height={14} width={30} />
+        <span>{data.text}</span>
+        <Icon name="close-blue" height={14} width={30} onClick={data.xFn} />
       </div>
       <hr />
     </Fragment>
-  )
-  
+  );
 }
 
 DataList.propTypes = {
   rows: (props, propName, componentName) => {
-    const err = new Error(`Invalid prop: ${componentName} must have a prop '${propName}' which must be a non-empty array of strings`);
+    const err = new Error(`Invalid prop: ${componentName} must have a prop '${propName}' which must be a non-empty array of objects. The objects much have a "text" property of type string and a "xFn" property of type function`);
 
     if(!Array.isArray(props.rows)) {
 			return err;
@@ -53,7 +52,7 @@ DataList.propTypes = {
 			return err;
     }
 
-    if (!props.rows.every(entry => typeof entry === 'string')) {
+    if (!props.rows.every(entry => typeof entry.text === 'string' && typeof entry.xFn === 'function')) {
 			return err;
     }
   },

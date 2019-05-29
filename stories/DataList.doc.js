@@ -9,11 +9,26 @@ storiesOf('DataList', module)
 				<DataList
 					// onClick={()=>alert('Clicked!')}
           rows={[
-            'Data Entry',
-            'Data Entry',
-            'Data Entry',
-            'Data Entry',
-            'This data entry is too long to fit on one line, so it wraps.',
+            {
+              text: 'Data Entry',
+              xFn: () => {alert('Clicked')},
+            },
+            {
+              text: 'Data Entry',
+              xFn: () => {alert('Clicked')},
+            },
+            {
+              text: 'Data Entry',
+              xFn: () => {alert('Clicked')},
+            },
+            {
+              text: 'Data Entry',
+              xFn: () => {alert('Clicked')},
+            },
+            {
+              text: 'This data entry is too long to fit on one line, so it wraps.',
+              xFn: () => {alert('Clicked')},
+            },
           ]}
           label="Label"
 				/>
