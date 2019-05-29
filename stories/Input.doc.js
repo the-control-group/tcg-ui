@@ -2,6 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Input } from '../src';
 
+/*eslint-disable*/
+// Enable console.logs for this file
+
 storiesOf('Input', module)
 	.add('Input', () => (
 		<div>
@@ -10,6 +13,8 @@ storiesOf('Input', module)
 				name="doc"
 				type="checkbox"
 				id="example-1"
+				inverse={false}
+				handleChange={() => console.log('handle change')}
 			/>
 			<br/>
 			<Input
@@ -17,6 +22,8 @@ storiesOf('Input', module)
 				name="doc2"
 				type="checkbox"
 				id="example-2"
+				inverse={false}
+				handleChange={() => console.log('handle change')}
 			/>
 			<br/>
 			<Input
@@ -24,6 +31,9 @@ storiesOf('Input', module)
 				name="doc3"
 				type="checkbox"
 				id="example-3"
+				inverse={false}
+				handleChange={() => console.log('handle change')}
+
 			/>
 			<br/>
 			<Input
@@ -33,6 +43,7 @@ storiesOf('Input', module)
 				inverse={true}
 				type="checkbox"
 				id="example-4"
+				handleChange={() => console.log('handle change')}
 			/>
 			<br/>
 			<Input
@@ -42,6 +53,7 @@ storiesOf('Input', module)
 				inverse={false}
 				type="checkbox"
 				id="example-5"
+				handleChange={() => console.log('handle change')}
 			/>
 			<br/>
 			<br/>
@@ -50,6 +62,8 @@ storiesOf('Input', module)
 				name="radio-example"
 				type="radio"
 				id="example-6"
+				inverse={false}
+				handleChange={() => console.log('handle change')}
 			/>
 			<br/>
 			<Input
@@ -57,6 +71,10 @@ storiesOf('Input', module)
 				name="radio-example"
 				type="radio"
 				id="example-7"
+				inverse={false}
+				handleChange={() => console.log('handle change')}
 			/>
 		</div>
 	));
+
+/*eslint-enable*/

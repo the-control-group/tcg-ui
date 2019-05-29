@@ -35,6 +35,7 @@ const Input = ({
 	id,
 	type,
 	checked,
+	handleChange,
 	remove, // Shows "-" character in the checkbox rather than a checkmark
 	classes,
 	...other
@@ -54,6 +55,7 @@ const Input = ({
 				id={id}
 				tag="input"
 				classes={combinedClasses}
+				onChange={handleChange}
 				{...other}
 			/>
 			<Label
@@ -71,21 +73,21 @@ const Input = ({
 Label.propTypes = {
 	content: PropTypes.string,
 	htmlFor: PropTypes.string,
-	classes: PropTypes.object,
-	remove: PropTypes.boolean,
-	inverse: PropTypes.boolean
+	classes: PropTypes.string,
+	remove: PropTypes.bool,
+	inverse: PropTypes.bool
 };
 
 Input.propTypes = {
-	inverse: PropTypes.boolean,
+	inverse: PropTypes.bool,
 	type: PropTypes.string,
-	checked: PropTypes.boolean,
+	checked: PropTypes.bool,
 	label: PropTypes.string,
 	name: PropTypes.string,
-	handleChange: PropTypes.function,
+	handleChange: PropTypes.func,
 	id: PropTypes.string,
 	classes: PropTypes.object,
-	remove: PropTypes.boolean
+	remove: PropTypes.bool
 };
 
 
