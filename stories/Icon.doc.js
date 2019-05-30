@@ -8,5 +8,7 @@ storiesOf('Icon', module)
 			<Icon name="email" size={15} />
 			<br/>
 			<Icon name="exit" size={15} />
+			<br />
+			<Icon name="foobar" size={15} />
 		</div>
 	));

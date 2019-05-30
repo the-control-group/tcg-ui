@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+  <g>
+    <g fill="none" stroke="#fff" stroke-width="1.5">
+      <circle cx="16" cy="16" r="16" stroke="none"/>
+      <circle cx="16" cy="16" r="15.25" fill="none"/>
+    </g>
+    <g transform="translate(-1453 -2870)">
+      <path d="M3,6V7.648H17.83V6" transform="translate(1459 2875)" fill="#fff"/>
+      <path d="M3,12.648h9.887V11H3" transform="translate(1461.472 2874.119)" fill="#fff"/>
+      <path d="M3,17.648H7.943V16H3Z" transform="translate(1463.943 2873.239)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

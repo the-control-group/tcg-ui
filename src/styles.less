@@ -8,130 +8,12 @@
 }
 
 /**
- * Colors
- */
-// primary colors
-@ui-color-blue: #19c2da;
-@ui-color-blue-darker: #0DB7D0;
-@ui-color-green: #5fcc67;
-@ui-color-green-darker: #5EC165;
-@ui-color-red: #de4a55;
-@ui-color-yellow: #f8e71c;
-@ui-color-slate: #3e3e54;
-@ui-color-slate-darker: #202235;
-@ui-color-slate-darkest: #171823;
-
-// neutrals
-@ui-color-white: #fff;
-@ui-color-black: #000;
-@ui-color-gray-light: #fafafa;
-@ui-color-gray-medium: #e6e6e6;
-@ui-color-gray-dark: #b1b1b1;
-
-// accents
-// @ui-color-gray-dark: #e6e6e6;
-@ui-color-dark-aqua: #05272c;
-
-// gradients
-// light green: 83cc4e -> 4ecc73;
-// dark green: 000000 -> 4ecc73;
-// light red: ff5252 -> ed4c5c;
-// dark red:  000000 -> ed4c5c;
-
-/**
- * Fonts
- */
-@ui-font-serif: serif;
-@ui-font-sans-serif: 'Roboto', Helvetica, Arial, sans-serif;
-
-/**
- * Font styles
- */
-// body styles
-@ui-font-body: {
-	font-size: 16px;
-	letter-spacing: 0.02em;
-}
-
-@ui-font-body-alt: {
-	font-size: 14px;
-	letter-spacing: 0.025em;
-}
-
-// heading styles
-@ui-font-h1: {
-	font-size: 64px;
-	letter-spacing: -0.03em;
-}
-
-@ui-font-h2: {
-	font-size: 48px;
-}
-
-@ui-font-h3: {
-	font-size: 32px;
-	letter-spacing: 0.015em;
-}
-
-@ui-font-h4: {
-	font-size: 24px;
-}
-
-@ui-font-h5: {
-	font-size: 20px;
-	letter-spacing: 0.015em;
-}
-
-@ui-font-h6: {
-	font-size: 20px;
-	letter-spacing: -0.01em;
-}
-
-// aux styles
-@ui-font-subtitle: {
-	font-size: 18px;
-	letter-spacing: 0.01em;
-}
-
-@ui-font-subtitle-alt: {
-	font-size: 16px;
-	letter-spacing: 0.015em;
-}
-
-@ui-font-caption: {
-	font-size: 12px;
-	letter-spacing: 0.025em;
-}
-
-@ui-font-overline: {
-	font-size: 10px;
-	letter-spacing: 0.12em;
-}
-
-/**
- * Opacity / Emphasis
- */
-@ui-opacity-full: 1;
-@ui-opacity-high: 0.87;
-@ui-opacity-medium: 0.6;
-@ui-opacity-low: 0.38;
-
-/**
- * Spacing
- */
-@base-spacing-unit: 8px;
-@ui-xx-small: (@base-spacing-unit / 2); // 4px
-@ui-x-small: @base-spacing-unit; // 8px
-@ui-small: (@base-spacing-unit * 2); // 16px
-@ui-medium: (@base-spacing-unit * 3); // 24px
-@ui-large: (@base-spacing-unit * 4); // 32px
-@ui-x-large: (@base-spacing-unit * 6); // 48px
-@ui-xx-large: (@base-spacing-unit * 9); // 72px
-
-/**
  * Import component styles
  */
 @import 'elements/Common/Common';
+@import 'elements/Grid/Grid';
+@import 'elements/FlexRow/FlexRow';
+@import 'elements/Flex/Flex';
 @import 'elements/Button/Button';
 @import 'elements/StatusBadge/StatusBadge';
 @import 'elements/Notification/Notification';
@@ -141,4 +23,5 @@
 @import 'elements/ToggleSwitch/ToggleSwitch';
 @import 'elements/DestructiveDialog/DestructiveDialog';
 @import 'elements/Input/Input';
+@import 'elements/Text/Text';
 @import 'elements/DataList/DataList';

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+  <g>
+    <path d="M0,0H32V32H0Z" fill="none"/>
+    <path d="M3,22H27V19.333H3Zm0-6.667H27V12.667H3ZM3,6V8.667H27V6Z" transform="translate(1 2)" fill="#fff"/>
+  </g>
+</svg>

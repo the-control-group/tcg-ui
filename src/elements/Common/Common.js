@@ -38,7 +38,8 @@ const Common = ({
 			right: { textAlign: 'right' },
 			center: { textAlign: 'center' },
 			floatRight: { float: 'right' },
-			floatLeft: { float: 'left' }
+			floatLeft: { float: 'left' },
+			clear: { overflow: 'hidden' }
 		},
 		styleValues = {
 			padding: 'padding',
