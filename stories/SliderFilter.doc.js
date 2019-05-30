@@ -5,7 +5,7 @@ import { SliderFilter } from '../src';
 
 storiesOf('SliderFilter', module)
 	.add('SliderFilter', () => (
-		<div style={{"background-color": "black"}}>
+		<div style={{backgroundColor: 'black'}}>
 			<SliderFilter
 				name="example"
 			/>

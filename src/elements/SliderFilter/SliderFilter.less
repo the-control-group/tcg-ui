@@ -2,10 +2,10 @@
 	.slider {
 		-webkit-appearance: none;  // Override default CSS styles
 		width: 160px;
-		height: 8px;
+		height: @ui-x-small;
   		appearance: none;
   		background: #d3d3d3;
-  		outline: none; // Remove outline
+  		outline: none;
 		background-color: @ui-color-slate;
   		-webkit-transition: .2s;
   		transition: opacity .2s;
@@ -15,15 +15,15 @@
   		-webkit-appearance: none;
   		appearance: none;
 		border-radius: 50%;
-  		width: 16px;
-  		height: 16px;
+  		width: @ui-small;
+  		height: @ui-small;
 		background: @ui-color-white;
   		cursor: pointer;
 	}
 
 	.slider::-moz-range-thumb {
-	  width: 16px;
-	  height: 16px;
+	  width: @ui-small;
+	  height: @ui-small;
 	  background: @ui-color-white;
 	  cursor: pointer;
 	}
