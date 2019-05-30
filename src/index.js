@@ -13,6 +13,7 @@ export { default as Input } from './elements/Input/Input';
 export { default as Icon } from './elements/Icon/Icon';
 export { default as Notification } from './elements/Notification/Notification';
 export { default as Text } from './elements/Text/Text';
+export { default as DataList } from './elements/DataList/DataList';
 
 export { getBreakpoint } from './util/helpers';
 export { isMobile } from './util/helpers';
