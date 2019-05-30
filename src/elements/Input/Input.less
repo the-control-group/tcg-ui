@@ -3,6 +3,8 @@
 	// Checkbox Styling
 	&[type="checkbox"] {
 		opacity: 0; // Hide default
+		width: 0;
+		height: 0;
 
 		& + label:before {
 			position: relative;
@@ -10,12 +12,12 @@
 			content: '';
 			margin-right: 10px;
 			display: inline-block;
-			width: 20px;
-			height: 20px;
+			width: 16px;
+			height: 16px;
 			background-color: transparent;
-			border: solid @ui-color-blue;
+			border: solid @ui-color-gray-dark;
     		border-radius: 3px;
-    		border-width: 3px;
+    		border-width: 2px;
 		  }
 
 		  & + label.remove.inverse::before {

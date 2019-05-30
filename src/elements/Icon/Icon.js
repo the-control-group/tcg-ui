@@ -15,7 +15,11 @@ const Icon = ({ name, size, width = size, height = size, style, className, onCli
 	svgs.keys().map((svg) => {
 		const svgName = svg.replace(/\.\/|\.svg/gi, '');
 
-		if(svgName === name) image = require(`./svgs/${svgName}.svg`).default;
+		if(svgName === name) {
+			// require().default doesn't seem to work in the host applications — need to investigate why.
+			// doing this check to make it work for both storybook & the app.
+			image = require(`./svgs/${svgName}.svg`).default || require(`./svgs/${svgName}.svg`);
+		}
 	});
 
 	// Height and width default to `size` prop, icons default to inline-block but can be overwritten in style

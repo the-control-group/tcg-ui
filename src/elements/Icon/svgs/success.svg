@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <g data-name="Icon: Notification - Success" transform="translate(-1490.143 -856)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <g transform="translate(-1490.143 -856)">
     <path d="M0,0H24V24H0Z" transform="translate(1490.143 856)" fill="none"/>
     <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2ZM9.29,16.29,5.7,12.7a1,1,0,0,1,1.41-1.41L10,14.17l6.88-6.88A1,1,0,0,1,18.29,8.7L10.7,16.29a1,1,0,0,1-1.41,0Z" transform="translate(1490.143 856)" fill="#5fcc67"/>
   </g>

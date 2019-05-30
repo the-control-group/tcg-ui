@@ -1,6 +1,6 @@
 import { configure } from '@storybook/react';
 
-import '../src/styles.less';
+import './storybook.less';
 
 const req = require.context('../stories', true, /\.doc\.js$/);
 
