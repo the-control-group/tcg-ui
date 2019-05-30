@@ -9,6 +9,7 @@ export { default as Chip } from './elements/Chip/Chip';
 export { default as ToggleSwitch } from './elements/ToggleSwitch/ToggleSwitch';
 export { default as DestructiveDialog } from './elements/DestructiveDialog/DestructiveDialog';
 export { default as Input } from './elements/Input/Input';
+export { default as DataList } from './elements/DataList/DataList';
 
 
 export { getBreakpoint } from './util/helpers';
