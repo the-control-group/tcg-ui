@@ -13,7 +13,7 @@ const DataList = ({ rows, label, ...other }) => {
 	const combinedClasses = classNames(
 		'data-list',
 		other.classes,
-  );
+	);
 
 	return (
 		<Common
