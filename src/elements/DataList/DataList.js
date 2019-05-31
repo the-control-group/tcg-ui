@@ -5,6 +5,7 @@
 import React, { Fragment } from 'react';
 import classNames from 'classnames';
 import Icon from '../Icon/Icon';
+import Text from '../Text/Text';
 
 import Common from '../Common/Common';
 
@@ -20,7 +21,7 @@ const DataList = ({ rows, label, ...other }) => {
 			tag="div"
 			{...other}
 		>
-			<label className="label">{label}</label>
+			<Text className="data-list-label" tag="label" variant="body-2" >{label}</Text>
 			<hr />
 			{rows.map((data, index) => <DataListRow key={index} data={data} />)}
 		</Common>
