@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { StatusBadge } from '../src';
 
 storiesOf('StatusBadge', module).add('Status Badge', () => (
-	<div style={{ 'background-color': '#121212', padding: '2em' }} >
+	<div style={{ 'background-color': '#121212', padding: '2em' }}>
 		<StatusBadge status="active" />
 		<br />
 		<br />
@@ -13,7 +13,6 @@ storiesOf('StatusBadge', module).add('Status Badge', () => (
 		<StatusBadge status="pending" />
 		<br />
 		<br />
-		<StatusBadge status="archived"
-		/>
+		<StatusBadge status="archived" />
 	</div>
 ));

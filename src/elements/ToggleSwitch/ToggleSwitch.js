@@ -2,20 +2,24 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
-const ToggleSwitch = ({ toggled, handleClick, disabled }) => {
+import Common from '../Common/Common';
+
+const ToggleSwitch = ({ toggled, disabled, ...other }) => {
 	const classes = classNames(
 		'ui-toggle-switch',
 		// Pass in props from a parent component to show "on" or "off" (ex. from parent component: toggled={this.state.user.isActive})
 		toggled && 'on',
-		disabled && 'disabled'
+		disabled && 'disabled',
+		other.className
 	);
 
 	return (
-		<div
+		<Common
+			{...other}
+			tag="div"
 			className={classes}
-			onClick={!disabled ? handleClick : null}
-		>
-		</div>
+			onClick={disabled ? undefined : other.onClick}
+		/>
 	);
 };
 

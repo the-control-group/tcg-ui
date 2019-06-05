@@ -5,7 +5,14 @@ import classNames from 'classnames';
 import { getBreakpoint, numberLikeProp } from '../../util/helpers';
 import Common from '../Common/Common';
 
-const FlexRow = ({ children, breakMedium, breakSmall, breakCustom, gutter, ...other }) => {
+const FlexRow = ({
+	children,
+	breakMedium,
+	breakSmall,
+	breakCustom,
+	gutter,
+	...other
+}) => {
 	const combinedClasses = classNames(
 			'ui-flex-row',
 			{
@@ -18,15 +25,16 @@ const FlexRow = ({ children, breakMedium, breakSmall, breakCustom, gutter, ...ot
 
 	switch (breakpoint) {
 		case 'Medium':
-			if(breakMedium) style.display = 'block';
+			if (breakMedium) style.display = 'block';
 			break;
 
 		case 'Small':
-			if(breakMedium || breakSmall) style.display = 'block';
+			if (breakMedium || breakSmall) style.display = 'block';
 			break;
 	}
 
-	if(breakCustom && window.innerWidth <= Number(breakCustom)) style.display = 'block';
+	if (breakCustom && window.innerWidth <= Number(breakCustom))
+		style.display = 'block';
 
 	return (
 		<Common

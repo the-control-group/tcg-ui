@@ -10,12 +10,7 @@ import classNames from 'classnames';
 
 import { getBreakpoint } from '../../util/helpers';
 
-const Common = ({
-	children,
-	classes,
-	tag,
-	...other
-}) => {
+const Common = ({ children, classes, tag, ...other }) => {
 	/**
 	 * The HTML element/tag name to be rendered
 	 */
@@ -75,30 +70,38 @@ const Common = ({
 			'onMouseEnter',
 			'onMouseLeave',
 			'onMouseDown',
-			'onMouseUp'
+			'onMouseUp',
+			'readOnly'
 		];
 
 	/**
 	 * Dynamically add any custom `data-...` attribute to the attribute whitelist
 	 */
 	const dataAttrRegex = /^data-/;
-	Object.keys(other).forEach(key => dataAttrRegex.test(key) && attributeValues.push(key));
+	Object.keys(other).forEach(
+		key => dataAttrRegex.test(key) && attributeValues.push(key)
+	);
 
 	/**
 	 * Loop through our style flags and add any styles
 	 */
 	Object.keys(styleFlags).forEach(key => {
-		if(other[key]) styles = {...styles, ...styleFlags[key]};
+		if (other[key]) styles = { ...styles, ...styleFlags[key] };
 	});
 
 	const styleClasses = [];
 	Object.keys(styleValues).forEach(key => {
-		if(other[key]) styleClasses.push(`common-${styleValues[key]}-${other[key]}`);
+		if (other[key])
+			styleClasses.push(`common-${styleValues[key]}-${other[key]}`);
 	});
 
 	attributeValues.forEach(v => {
 		// If the "value" or "checked" attribute is present, it should be added regardless of truthiness
-		if(other[v] || (v === 'value' && other.hasOwnProperty('value')) || (v === 'checked' && other.hasOwnProperty('checked'))) {
+		if (
+			other[v] ||
+			(v === 'value' && other.hasOwnProperty('value')) ||
+			(v === 'checked' && other.hasOwnProperty('checked'))
+		) {
 			attributes[v] = other[v];
 		}
 	});
@@ -114,11 +117,7 @@ const Common = ({
 	);
 
 	return (
-		<Tag
-			className={combinedClasses}
-			style={styles}
-			{...attributes}
-		>
+		<Tag className={combinedClasses} style={styles} {...attributes}>
 			{children && children}
 		</Tag>
 	);

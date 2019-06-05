@@ -18,16 +18,19 @@ class LoadingBar extends Component {
 			// Apply delay upon component mount
 			setTimeout(() => {
 				// Fire timer function every 100th of duration time (ex: for a duration of 10000 ms, timer fn would fire every 1000 ms)
-				const intervalId = setInterval(this.timer, (this.props.duration / 100));
+				const intervalId = setInterval(
+					this.timer,
+					this.props.duration / 100
+				);
 
 				// Set intervalId in state in order to pass into clearInterval when component unmounts
-				this.setState({intervalId});
+				this.setState({ intervalId });
 			}, this.props.delay);
 		}
 	}
 
 	componentWillUnmount() {
-		if(this.state.intervalId) {
+		if (this.state.intervalId) {
 			clearInterval(this.state.intervalId);
 		}
 	}
@@ -36,12 +39,12 @@ class LoadingBar extends Component {
 		// Increment percentage to fill loader
 		this.setState({ percentage: this.state.percentage + 1 });
 
-		if(this.state.percentage === 100) {
+		if (this.state.percentage === 100) {
 			// Once the the loader has filled, stop firing functionality and execute onComplete method
 			clearInterval(this.state.intervalId);
 
 			//Fire onComplete functionality if available
-			if(this.props.onComplete) {
+			if (this.props.onComplete) {
 				this.props.onComplete();
 			}
 		}
@@ -49,11 +52,13 @@ class LoadingBar extends Component {
 
 	render() {
 		// Check here for percentage from props or if it's populated in state (percent complete loading bar vs. timer loading bar)
-		const percentage = this.props.percentComplete ? this.props.percentComplete : this.state.percentage;
+		const percentage = this.props.percentComplete
+			? this.props.percentComplete
+			: this.state.percentage;
 
 		return (
 			<div className="ui-loading-bar-wrapper">
-				<div className="bar" style={{width: percentage + '%'}} />
+				<div className="bar" style={{ width: percentage + '%' }} />
 			</div>
 		);
 	}
