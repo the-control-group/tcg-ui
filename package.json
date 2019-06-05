@@ -1,68 +1,68 @@
 {
- "name": "@the-control-group/tcg-ui",
- "version": "1.0.0",
- "description": "UI kit for internal applications, based on React",
- "main": "lib/index.js",
- "files": [
-  "lib"
- ],
- "scripts": {
-  "format": "prettier '**/*.{js,json,md,less,css}' --write",
-  "storybook": "start-storybook",
-  "start": "cpx \"src/**/*.{less,js,svg}\" lib --watch",
-  "copy": "rm -rf lib/ && cpx \"src/**/*.{less,js,svg}\" lib",
-  "test": "eslint src && prettier '**/*.{js,json,md,less,css}' --check",
-  "prepublishOnly": "npm test && npm run copy"
- },
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/the-control-group/tcg-ui.git"
- },
- "author": "The Control Group",
- "license": "UNLICENSED",
- "bugs": {
-  "url": "https://github.com/the-control-group/tcg-ui/issues"
- },
- "homepage": "https://github.com/the-control-group/tcg-ui#readme",
- "devDependencies": {
-  "@babel/core": "^7.4.4",
-  "@storybook/react": "^5.0.11",
-  "babel-eslint": "^8.2.6",
-  "babel-loader": "^8.0.5",
-  "classnames": "^2.2.6",
-  "cpx": "^1.5.0",
-  "css-loader": "^2.1.1",
-  "eslint": "^5.3.0",
-  "eslint-config-prettier": "^4.3.0",
-  "eslint-plugin-prettier": "^3.1.0",
-  "eslint-plugin-react": "^7.11.1",
-  "husky": "^2.4.0",
-  "less": "^3.9.0",
-  "less-loader": "^5.0.0",
-  "lint-staged": "^8.1.7",
-  "prettier": "1.17.1",
-  "prop-types": "^15.6.2",
-  "raw-loader": "^2.0.0",
-  "react": "^16.8.0",
-  "react-dom": "^16.8.0",
-  "style-loader": "^0.23.1",
-  "url-loader": "^1.1.2"
- },
- "peerDependencies": {
-  "classnames": ">=2",
-  "prop-types": ">=15",
-  "react": ">=16",
-  "react-dom": ">=16"
- },
- "husky": {
-  "hooks": {
-   "pre-commit": "lint-staged"
-  }
- },
- "lint-staged": {
-  "*.js": [
-   "eslint --fix",
-   "git add"
-  ]
- }
+	"name": "@the-control-group/tcg-ui",
+	"version": "1.0.0",
+	"description": "UI kit for internal applications, based on React",
+	"main": "lib/index.js",
+	"files": [
+		"lib"
+	],
+	"scripts": {
+		"format": "prettier '**/*.{js,json,md,less,css}' --write",
+		"storybook": "start-storybook",
+		"start": "cpx \"src/**/*.{less,js,svg}\" lib --watch",
+		"copy": "rm -rf lib/ && cpx \"src/**/*.{less,js,svg}\" lib",
+		"test": "eslint src && prettier '**/*.{js,json,md,less,css}' --check",
+		"prepublishOnly": "npm test && npm run copy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/the-control-group/tcg-ui.git"
+	},
+	"author": "The Control Group",
+	"license": "UNLICENSED",
+	"bugs": {
+		"url": "https://github.com/the-control-group/tcg-ui/issues"
+	},
+	"homepage": "https://github.com/the-control-group/tcg-ui#readme",
+	"devDependencies": {
+		"@babel/core": "^7.4.4",
+		"@storybook/react": "^5.0.11",
+		"babel-eslint": "^8.2.6",
+		"babel-loader": "^8.0.5",
+		"classnames": "^2.2.6",
+		"cpx": "^1.5.0",
+		"css-loader": "^2.1.1",
+		"eslint": "^5.3.0",
+		"eslint-config-prettier": "^4.3.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"eslint-plugin-react": "^7.11.1",
+		"husky": "^2.4.0",
+		"less": "^3.9.0",
+		"less-loader": "^5.0.0",
+		"lint-staged": "^8.1.7",
+		"prettier": "1.17.1",
+		"prop-types": "^15.6.2",
+		"raw-loader": "^2.0.0",
+		"react": "^16.8.0",
+		"react-dom": "^16.8.0",
+		"style-loader": "^0.23.1",
+		"url-loader": "^1.1.2"
+	},
+	"peerDependencies": {
+		"classnames": ">=2",
+		"prop-types": ">=15",
+		"react": ">=16",
+		"react-dom": ">=16"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix",
+			"git add"
+		]
+	}
 }

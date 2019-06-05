@@ -9,9 +9,7 @@ module.exports = {
 			experimentalObjectRestSpread: true
 		}
 	},
-	plugins: [
-		'react'
-	],
+	plugins: ['react'],
 	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended',
@@ -30,15 +28,15 @@ module.exports = {
 		'comma-spacing': 2,
 		'dot-notation': 2,
 		eqeqeq: 2,
-		indent: [2, 'tab', {SwitchCase: 1}],
+		indent: [2, 'tab', { SwitchCase: 1 }],
 		'key-spacing': 2,
 		'lines-between-class-members': 2,
 		'max-len': [2, 200, 2],
-		'newline-per-chained-call': [2, {ignoreChainWithDepth: 3}],
-		'no-console': [2, {allow: ['error']}],
+		'newline-per-chained-call': [2, { ignoreChainWithDepth: 3 }],
+		'no-console': [2, { allow: ['error'] }],
 		'no-multiple-empty-lines': 2,
 		'no-shadow': 2,
-		'no-unneeded-ternary': [2, {defaultAssignment: false}],
+		'no-unneeded-ternary': [2, { defaultAssignment: false }],
 		'no-unused-expressions': 2,
 		'no-var': 2,
 		'object-shorthand': 2,
@@ -49,11 +47,14 @@ module.exports = {
 		quotes: [2, 'single'],
 		'require-await': 2,
 		semi: [2, 'always'],
-		'space-before-function-paren': [2, {anonymous: 'always', named: 'never'}],
+		'space-before-function-paren': [
+			2,
+			{ anonymous: 'always', named: 'never' }
+		],
 		'space-infix-ops': 2,
 		strict: 2,
 		yoda: 2,
-		'react/jsx-curly-spacing': [2, {when: 'never', children: true}],
+		'react/jsx-curly-spacing': [2, { when: 'never', children: true }],
 		'react/no-unescaped-entities': 0
 	}
 };
