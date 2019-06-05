@@ -12,6 +12,7 @@
   "start": "cpx \"src/**/*.{less,js,svg}\" lib --watch",
   "copy": "rm -rf lib/ && cpx \"src/**/*.{less,js,svg}\" lib",
   "test": "eslint src && prettier '**/*.{js,json,md,less,css}' --check",
+  "lint": "eslint src --fix",
   "prepublishOnly": "npm test && npm run copy"
  },
  "repository": {
