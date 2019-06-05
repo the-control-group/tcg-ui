@@ -8,13 +8,7 @@ import classNames from 'classnames';
 
 import Common from '../Common/Common';
 
-const Div = ({
-	children,
-	item,
-	card,
-	subsection,
-	...other
-}) => {
+const Div = ({ children, item, card, subsection, ...other }) => {
 	const combinedClasses = classNames(
 		'ui-div',
 		other.classes,
@@ -24,11 +18,7 @@ const Div = ({
 	);
 
 	return (
-		<Common
-			{...other}
-			classes={combinedClasses}
-			tag="div"
-		>
+		<Common {...other} classes={combinedClasses} tag="div">
 			{children}
 		</Common>
 	);

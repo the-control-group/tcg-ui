@@ -12,9 +12,9 @@ import Common from '../Common/Common';
 /**
  * Render the grid's children as grid items
  */
-const renderGridItems = (items, widths = [], blocks, stacked, gutter) => (
+const renderGridItems = (items, widths = [], blocks, stacked, gutter) =>
 	Children.map(items, (child, i) => {
-		if(!child) return null;
+		if (!child) return null;
 
 		const colSize = widths[i] || 1;
 
@@ -31,11 +31,11 @@ const renderGridItems = (items, widths = [], blocks, stacked, gutter) => (
 				...child.props.style
 			};
 
-		if(blocks) {
+		if (blocks) {
 			// margins plus extra percent ensures that only the desired number of blocks will be placed on the line
 			style.flex = `0 0 ${100 / blocks}%`;
 			style.maxWidth = `${100 / blocks}%`;
-		} else if(!stacked) {
+		} else if (!stacked) {
 			style.flexGrow = colSize;
 		}
 
@@ -43,8 +43,7 @@ const renderGridItems = (items, widths = [], blocks, stacked, gutter) => (
 			style,
 			className: classes
 		});
-	})
-);
+	});
 
 /**
  * Grid component

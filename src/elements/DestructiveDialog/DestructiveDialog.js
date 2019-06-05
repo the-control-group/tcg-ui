@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button/Button';
@@ -11,23 +10,21 @@ const DestructiveDialog = ({
 	primaryActionClickHandler,
 	primaryActionContent,
 	secondaryActionClickHandler,
-	secondaryActionContent}) => {
-//TODO: Switch out h1/p elements to utilize Text component when ready
-	return(
-		<div className="ui-destructive-dialog-container" style={{height, width}}>
+	secondaryActionContent
+}) => {
+	//TODO: Switch out h1/p elements to utilize Text component when ready
+	return (
+		<div
+			className="ui-destructive-dialog-container"
+			style={{ height, width }}
+		>
 			<h1 className="destructive-dialog-title">{title}</h1>
 			<p className="destructive-dialog-content">{content}</p>
 			<div className="destructive-dialog-button-wrapper">
-				<Button
-					onClick={primaryActionClickHandler}
-					bare
-				>
+				<Button onClick={primaryActionClickHandler} bare>
 					{primaryActionContent}
 				</Button>
-				<Button
-					onClick={secondaryActionClickHandler}
-					bare
-				>
+				<Button onClick={secondaryActionClickHandler} bare>
 					{secondaryActionContent}
 				</Button>
 			</div>

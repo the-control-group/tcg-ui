@@ -9,20 +9,15 @@ import Icon from '../Icon/Icon';
 import Common from '../Common/Common';
 
 const DataList = ({ rows, label, ...other }) => {
-	const combinedClasses = classNames(
-		'data-list',
-		other.classes,
-	);
+	const combinedClasses = classNames('data-list', other.classes);
 
 	return (
-		<Common
-			classes={combinedClasses}
-			tag="div"
-			{...other}
-		>
+		<Common classes={combinedClasses} tag="div" {...other}>
 			<label className="label">{label}</label>
 			<hr />
-			{rows.map((data, index) => <DataListRow key={index} data={data} />)}
+			{rows.map((data, index) => (
+				<DataListRow key={index} data={data} />
+			))}
 		</Common>
 	);
 };
@@ -32,7 +27,12 @@ const DataListRow = ({ data }) => {
 		<Fragment>
 			<div className="data-list-item">
 				<span>{data.text}</span>
-				<Icon name="close-blue" height={14} width={30} onClick={data.xFn} />
+				<Icon
+					name="close-blue"
+					height={14}
+					width={30}
+					onClick={data.xFn}
+				/>
 			</div>
 			<hr />
 		</Fragment>
@@ -44,21 +44,29 @@ DataList.propTypes = {
 		const err = new Error(`${componentName} must have a prop '${propName}' which must be a non-empty array of objects.
 The objects much have a "text" property of type string and a "xFn" property of type function`);
 
-		if(!Array.isArray(props.rows)) {
+		if (!Array.isArray(props.rows)) {
 			return err;
 		}
 
-		if(props.rows.length < 1) {
+		if (props.rows.length < 1) {
 			return err;
 		}
 
-		if (!props.rows.every(entry => typeof entry.text === 'string' && typeof entry.xFn === 'function')) {
+		if (
+			!props.rows.every(
+				entry =>
+					typeof entry.text === 'string' &&
+					typeof entry.xFn === 'function'
+			)
+		) {
 			return err;
 		}
 	},
 	label: (props, propName, componentName) => {
-		if((typeof props.label !== 'string') || props.label.length < 1) {
-			return new Error(`${componentName} must have a prop '${propName}' which must be a non-empty string`);
+		if (typeof props.label !== 'string' || props.label.length < 1) {
+			return new Error(
+				`${componentName} must have a prop '${propName}' which must be a non-empty string`
+			);
 		}
 	}
 };
@@ -68,19 +76,19 @@ DataListRow.propTypes = {
 		const err = new Error(`${componentName} must have a prop '${propName}' which must be an object.
 The object must have a 'text' property which is a non-zero length string and a 'xFn' property which is a function`);
 
-		if(typeof props.data !== 'object') {
+		if (typeof props.data !== 'object') {
 			return err;
 		}
 
-		if(typeof props.data.text !== 'string') {
+		if (typeof props.data.text !== 'string') {
 			return err;
 		}
 
-		if(props.data.text.length < 1 ) {
+		if (props.data.text.length < 1) {
 			return err;
 		}
 
-		if(typeof props.data.xFn !== 'function') {
+		if (typeof props.data.xFn !== 'function') {
 			return err;
 		}
 	}

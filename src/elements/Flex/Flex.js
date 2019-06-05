@@ -15,8 +15,8 @@ const Flex = ({ children, max, fixed, centerY, ...other }) => {
 		),
 		style = {};
 
-	if(max) style.maxWidth = Number(max);
-	if(fixed) {
+	if (max) style.maxWidth = Number(max);
+	if (fixed) {
 		style.flexGrow = 0;
 		style.flexShrink = 0;
 		style.flexBasis = Number(fixed);
