@@ -9,7 +9,8 @@ const Label = ({
 	inverse, // Opposite color scheme
 	remove, // Shows "-" character in the checkbox rather than a checkmark
 	htmlFor,
-	onClick
+	onClick,
+	onChange
 }) => {
 	const labelClasses = classNames(
 		'ui-input-label',
@@ -24,6 +25,7 @@ const Label = ({
 			classes={labelClasses}
 			htmlFor={htmlFor}
 			onClick={onClick}
+			onChange={onChange}
 		>
 			{content}
 		</Common>
@@ -64,6 +66,7 @@ const Input = ({
 				remove={remove}
 				inverse={inverse}
 				onClick={other.onClick}
+				onChange={other.onChange}
 			/>
 		</Fragment>
 	);
@@ -75,7 +78,8 @@ Label.propTypes = {
 	classes: PropTypes.string,
 	remove: PropTypes.bool,
 	inverse: PropTypes.bool,
-	onClick: PropTypes.func
+	onClick: PropTypes.func,
+	onChange: PropTypes.func
 };
 
 Input.propTypes = {
