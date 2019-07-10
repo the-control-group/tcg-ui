@@ -13,14 +13,7 @@ const ToggleSwitch = ({ toggled, disabled, ...other }) => {
 		other.className
 	);
 
-	return (
-		<Common
-			{...other}
-			tag="div"
-			className={classes}
-			onClick={disabled ? undefined : other.onClick}
-		/>
-	);
+	return <Common {...other} tag="div" className={classes} onClick={disabled ? undefined : other.onClick} />;
 };
 
 ToggleSwitch.propTypes = {

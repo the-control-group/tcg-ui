@@ -20,9 +20,7 @@ const StatusBadge = ({ status, ...other }) => {
 
 StatusBadge.propTypes = {
 	status: (props, propName, componentName) => {
-		if (
-			!['active', 'paused', 'pending', 'archived'].includes(props.status)
-		) {
+		if (!['active', 'paused', 'pending', 'archived'].includes(props.status)) {
 			return new Error(
 				`Invalid prop: ${componentName} must have a prop '${propName}' with a value of one of ['active', 'paused', 'pending', 'status']`
 			);

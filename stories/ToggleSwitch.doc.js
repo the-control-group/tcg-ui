@@ -6,27 +6,17 @@ storiesOf('ToggleSwitch', module).add('ToggleSwitch', () => (
 	<div>
 		<span>"off"</span>
 		<div>
-			<ToggleSwitch
-				handleClick={() => alert('enabled!')}
-				toggled={false}
-			/>
+			<ToggleSwitch handleClick={() => alert('enabled!')} toggled={false} />
 		</div>
 		<br />
 		<span>"on"</span>
 		<div>
-			<ToggleSwitch
-				handleClick={() => alert('disabled!')}
-				toggled={true}
-			/>
+			<ToggleSwitch handleClick={() => alert('disabled!')} toggled={true} />
 		</div>
 		<br />
 		<span>"disabled"</span>
 		<div>
-			<ToggleSwitch
-				handleClick={() => alert('this should not fire!')}
-				toggled={false}
-				disabled={true}
-			/>
+			<ToggleSwitch handleClick={() => alert('this should not fire!')} toggled={false} disabled={true} />
 		</div>
 	</div>
 ));

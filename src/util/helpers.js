@@ -7,8 +7,7 @@ const largeBreakpoint = 1025,
 
 export const getBreakpoint = () => {
 	if (viewportWidth > largeBreakpoint) return 'Large';
-	if (viewportWidth < largeBreakpoint && viewportWidth > mediumBreakpoint)
-		return 'Medium';
+	if (viewportWidth < largeBreakpoint && viewportWidth > mediumBreakpoint) return 'Medium';
 	return 'Small';
 };
 

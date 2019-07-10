@@ -4,11 +4,7 @@ import PropTypes from 'prop-types';
 const RadialLoader = ({ size = 20 }) => {
 	return (
 		<object className="radial-loader">
-			<svg
-				viewBox="0 0 100 100"
-				preserveAspectRatio="xMidYMid"
-				style={{ height: size, width: size }}
-			>
+			<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style={{ height: size, width: size }}>
 				<rect
 					x="46.5"
 					y="40"
@@ -19,14 +15,7 @@ const RadialLoader = ({ size = 20 }) => {
 					fill="#a6a6a6"
 					transform="rotate(0 50 50) translate(0 -30)"
 				>
-					<animate
-						attributeName="opacity"
-						from="1"
-						to="0"
-						dur="1s"
-						begin="0s"
-						repeatCount="indefinite"
-					/>
+					<animate attributeName="opacity" from="1" to="0" dur="1s" begin="0s" repeatCount="indefinite" />
 				</rect>
 				<rect
 					x="46.5"
@@ -76,14 +65,7 @@ const RadialLoader = ({ size = 20 }) => {
 					fill="#a6a6a6"
 					transform="rotate(90 50 50) translate(0 -30)"
 				>
-					<animate
-						attributeName="opacity"
-						from="1"
-						to="0"
-						dur="1s"
-						begin="0.25s"
-						repeatCount="indefinite"
-					/>
+					<animate attributeName="opacity" from="1" to="0" dur="1s" begin="0.25s" repeatCount="indefinite" />
 				</rect>
 				<rect
 					x="46.5"
@@ -133,14 +115,7 @@ const RadialLoader = ({ size = 20 }) => {
 					fill="#a6a6a6"
 					transform="rotate(180 50 50) translate(0 -30)"
 				>
-					<animate
-						attributeName="opacity"
-						from="1"
-						to="0"
-						dur="1s"
-						begin="0.5s"
-						repeatCount="indefinite"
-					/>
+					<animate attributeName="opacity" from="1" to="0" dur="1s" begin="0.5s" repeatCount="indefinite" />
 				</rect>
 				<rect
 					x="46.5"
@@ -190,14 +165,7 @@ const RadialLoader = ({ size = 20 }) => {
 					fill="#a6a6a6"
 					transform="rotate(270 50 50) translate(0 -30)"
 				>
-					<animate
-						attributeName="opacity"
-						from="1"
-						to="0"
-						dur="1s"
-						begin="0.75s"
-						repeatCount="indefinite"
-					/>
+					<animate attributeName="opacity" from="1" to="0" dur="1s" begin="0.75s" repeatCount="indefinite" />
 				</rect>
 				<rect
 					x="46.5"

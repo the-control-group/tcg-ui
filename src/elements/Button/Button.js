@@ -8,18 +8,7 @@ import classNames from 'classnames';
 
 import Common from '../Common/Common';
 
-const Button = ({
-	children,
-	type = 'button',
-	loading,
-	disabled,
-	mini,
-	full,
-	outline,
-	bare,
-	small,
-	...other
-}) => {
+const Button = ({ children, type = 'button', loading, disabled, mini, full, outline, bare, small, ...other }) => {
 	const style = outline ? 'outline' : bare ? 'bare' : '';
 
 	const combinedClasses = classNames(
@@ -33,13 +22,7 @@ const Button = ({
 	);
 
 	return (
-		<Common
-			{...other}
-			classes={combinedClasses}
-			tag="button"
-			type={type}
-			disabled={disabled}
-		>
+		<Common {...other} classes={combinedClasses} tag="button" type={type} disabled={disabled}>
 			{children}
 		</Common>
 	);
