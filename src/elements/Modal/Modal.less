@@ -3,13 +3,13 @@
  */
 
 @ui-modal-padding: 1em;
-@ui-modal-margin-top: 160px;
 @ui-modal-background: @ui-color-white;
 @ui-modal-header-background: @ui-color-blue;
 @ui-modal-header-color: @ui-color-white;
 @ui-modal-text-color: @ui-color-black;
 @ui-modal-width: 480px;
 @ui-modal-min-height: 250px;
+@ui-modal-max-height: 450px;
 @ui-modal-overlay-opacity: 0.5;
 @ui-modal-overlay-background: @ui-color-black;
 
@@ -29,7 +29,9 @@
 	width: @ui-modal-width;
 	left: 50%;
 	margin-left: -1 * @ui-modal-width / 2;
-	top: @ui-modal-margin-top;
+	top: 50%;
+	transform: translateY(-50%);
+	max-height: @ui-modal-max-height;
 	padding: @ui-modal-padding;
 	overflow-y: scroll;
 	background: @ui-modal-background;

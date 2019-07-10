@@ -71,16 +71,15 @@ const Common = ({ children, classes, tag, ...other }) => {
 			'onMouseLeave',
 			'onMouseDown',
 			'onMouseUp',
-			'readOnly'
+			'readOnly',
+			'defaultValue'
 		];
 
 	/**
 	 * Dynamically add any custom `data-...` attribute to the attribute whitelist
 	 */
 	const dataAttrRegex = /^data-/;
-	Object.keys(other).forEach(
-		key => dataAttrRegex.test(key) && attributeValues.push(key)
-	);
+	Object.keys(other).forEach(key => dataAttrRegex.test(key) && attributeValues.push(key));
 
 	/**
 	 * Loop through our style flags and add any styles
@@ -91,8 +90,7 @@ const Common = ({ children, classes, tag, ...other }) => {
 
 	const styleClasses = [];
 	Object.keys(styleValues).forEach(key => {
-		if (other[key])
-			styleClasses.push(`common-${styleValues[key]}-${other[key]}`);
+		if (other[key]) styleClasses.push(`common-${styleValues[key]}-${other[key]}`);
 	});
 
 	attributeValues.forEach(v => {
@@ -109,12 +107,7 @@ const Common = ({ children, classes, tag, ...other }) => {
 	/**
 	 * Classes
 	 */
-	const combinedClasses = classNames(
-		classes,
-		other['classes' + getBreakpoint()],
-		other.className,
-		styleClasses
-	);
+	const combinedClasses = classNames(classes, other['classes' + getBreakpoint()], other.className, styleClasses);
 
 	return (
 		<Tag className={combinedClasses} style={styles} {...attributes}>

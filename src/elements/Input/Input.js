@@ -1,85 +1,56 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+
 import Common from '../Common/Common';
 
-const Label = ({
-	classes,
-	content,
-	inverse, // Opposite color scheme
-	remove, // Shows "-" character in the checkbox rather than a checkmark
-	htmlFor,
-	onClick,
-	onChange
-}) => {
-	const labelClasses = classNames(
-		'ui-input-label',
-		{ remove },
-		{ inverse },
-		classes
-	);
+import Text from '../Text/Text';
+
+const Label = ({ children, htmlFor }) => (
+	<label htmlFor={htmlFor}>
+		<Text variant="caption" inverse marginBottom="xx-small">
+			{children}
+		</Text>
+	</label>
+);
+
+const Input = ({ label, htmlFor, type = 'text', options, nested, placeholder, full, ...other }) => {
+	const combinedClasses = classNames('ui-input-wrapper', full && 'full', nested && 'nested', other.classes);
+
+	if (type === 'select') {
+		return (
+			<div className={combinedClasses}>
+				{label && <Label htmlFor={htmlFor}>{label}</Label>}
+
+				<Common tag="select" defaultValue="select-placeholder" classes="ui-input" {...other}>
+					{placeholder && (
+						<option value="select-placeholder" disabled>
+							{placeholder}
+						</option>
+					)}
+
+					{Object.keys(options).map((keyName, keyIndex) => (
+						<option key={keyIndex} value={keyName}>
+							{options[keyName]}
+						</option>
+					))}
+				</Common>
+			</div>
+		);
+	}
 
 	return (
-		<Common
-			tag="label"
-			classes={labelClasses}
-			htmlFor={htmlFor}
-			onClick={onClick}
-			onChange={onChange}
-		>
-			{content}
-		</Common>
-	);
-};
+		<div className={combinedClasses}>
+			{label && <Label htmlFor={htmlFor}>{label}</Label>}
 
-const Input = ({
-	inverse, // Opposite color scheme
-	label,
-	name,
-	id,
-	type,
-	checked,
-	handleChange,
-	remove, // Shows "-" character in the checkbox rather than a checkmark
-	classes,
-	...other
-}) => {
-	const combinedClasses = classNames('ui-input', classes);
-
-	return (
-		<Fragment>
-			<Common
-				type={type}
-				checked={checked}
-				name={name}
-				label={label}
-				id={id}
-				tag="input"
-				classes={combinedClasses}
-				onChange={handleChange}
-				{...other}
-			/>
-			<Label
-				htmlFor={id}
-				content={label}
-				classes={combinedClasses}
-				remove={remove}
-				inverse={inverse}
-				onClick={other.onClick}
-				onChange={other.onChange}
-			/>
-		</Fragment>
+			<Common tag="input" classes="ui-input" type={type} placeholder={placeholder} {...other} />
+		</div>
 	);
 };
 
 Label.propTypes = {
-	content: PropTypes.string,
-	htmlFor: PropTypes.string,
-	classes: PropTypes.string,
-	remove: PropTypes.bool,
-	inverse: PropTypes.bool,
-	onClick: PropTypes.func,
-	onChange: PropTypes.func
+	children: PropTypes.string,
+	htmlFor: PropTypes.string
 };
 
 Input.propTypes = {
@@ -91,7 +62,12 @@ Input.propTypes = {
 	handleChange: PropTypes.func,
 	id: PropTypes.string,
 	classes: PropTypes.object,
-	remove: PropTypes.bool
+	remove: PropTypes.bool,
+	htmlFor: PropTypes.string,
+	placeholder: PropTypes.string,
+	options: PropTypes.object,
+	nested: PropTypes.bool,
+	full: PropTypes.bool
 };
 
 export default Input;

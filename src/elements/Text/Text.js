@@ -11,18 +11,18 @@ import Common from '../Common/Common';
 const Text = props => {
 	const {
 		children,
-		variant = 'body-1', // h1-h6, body-2, subtitle, subtitle-2, caption, overline
+		variant = 'body-1', // h1-h6 || body-2 || subtitle || subtitle-2 || caption || overline
 		bold,
 		italic,
 		uppercase,
 		lowercase,
+		inverse,
 		...other
 	} = props;
 
-	const combinedClasses = classNames('ui-text', variant, other.classes);
+	const combinedClasses = classNames('ui-text', variant, inverse && 'inverse', other.classes);
 
-	const tag =
-		tag === ('h1' || 'h2' || 'h3' || 'h4' || 'h5' || 'h6') ? variant : 'p';
+	const tag = tag === ('h1' || 'h2' || 'h3' || 'h4' || 'h5' || 'h6') ? variant : 'p';
 
 	const style = {};
 	if (bold) style.fontWeight = '600';
@@ -31,13 +31,7 @@ const Text = props => {
 	if (lowercase) style.textTransform = 'lowercase';
 
 	return (
-		<Common
-			cName="Text"
-			tag={tag}
-			{...other}
-			classes={combinedClasses}
-			style={style}
-		>
+		<Common cName="Text" tag={tag} {...other} classes={combinedClasses} style={style}>
 			{children}
 		</Common>
 	);
@@ -49,7 +43,8 @@ Text.propTypes = {
 	bold: PropTypes.bool,
 	italic: PropTypes.bool,
 	uppercase: PropTypes.bool,
-	lowercase: PropTypes.bool
+	lowercase: PropTypes.bool,
+	inverse: PropTypes.bool
 };
 
 export default Text;

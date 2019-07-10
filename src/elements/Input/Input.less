@@ -1,98 +1,28 @@
-.ui-input {
-	// Checkbox Styling
-	&[type='checkbox'] {
-		opacity: 0; // Hide default
-		width: 0;
-		height: 0;
-
-		+ label {
-			cursor: pointer;
-		}
-
-		& + label:before {
-			position: relative;
-			top: 6px;
-			content: '';
-			margin-right: 10px;
-			display: inline-block;
-			width: 16px;
-			height: 16px;
-			background-color: transparent;
-			border: solid @ui-color-gray-dark;
-			border-radius: 3px;
-			border-width: 2px;
-		}
-
-		// Add bottom and left borders and rotate to make pseudo element look like a checkmark
-		&:checked {
-			& + label::before {
-				background-color: @ui-color-gray-light;
-				border: solid @ui-color-gray-light;
-			}
-
-			& + label::after {
-				position: absolute;
-				content: '';
-				display: inline-block;
-				height: 5px;
-				width: 10px;
-				left: 4px;
-				top: 12px;
-				transform: rotate(-60deg);
-				border-left: 2px solid @ui-color-slate;
-				border-bottom: 2px solid @ui-color-slate;
-			}
-
-			// Custom styling for the "-" character in the checkbox
-			& + label.remove::before {
-				background-color: @ui-color-white;
-				border: solid @ui-color-white;
-				border-radius: 3px;
-				border-width: 3px;
-			}
-
-			& + label.remove::after {
-				border-bottom: 3px solid @ui-color-slate;
-				margin-top: 12px;
-				border-left: none;
-				transform: none;
-			}
-		}
+.ui-input-wrapper {
+	&.nested {
+		margin-left: @ui-large;
 	}
 
-	// Radio selector styling
-	&[type='radio'] {
-		opacity: 0;
-
-		& + label:before {
-			position: relative;
-			top: 8px;
-			content: '';
-			margin-right: 10px;
-			display: inline-block;
-			width: 24px;
-			height: 24px;
-			background-color: transparent;
-			border-radius: 50%;
-			border: solid 4px @ui-color-blue;
-		}
-
-		&:checked {
-			& + label::after {
-				position: absolute;
-				content: '';
-				display: inline-block;
-				height: 15px;
-				width: 15px;
-				left: 34.5px;
-				margin-top: 16px;
-				background-color: @ui-color-blue;
-				border-radius: 50%;
-			}
-		}
+	&.full .ui-input {
+		width: 100%;
 	}
 }
 
-.ui-input-label {
-	font-family: @ui-font-sans-serif;
+.ui-input-wrapper + .ui-input-wrapper {
+	margin-top: @ui-x-small;
+}
+
+.ui-input {
+	background: @ui-color-gray-light;
+	border: 1px solid @ui-color-gray-medium;
+	outline-color: @ui-color-blue;
+	outline-width: 2px;
+
+	&[type='text'] {
+		padding: @ui-x-small;
+	}
+
+	select& {
+		height: 36px;
+	}
 }
