@@ -16,10 +16,7 @@ const DestructiveDialog = ({
 	return (
 		<Fragment>
 			<div className="ui-modal-overlay" />
-			<div
-				className="ui-destructive-dialog-container"
-				style={{ height, width }}
-			>
+			<div className="ui-destructive-dialog-container" style={{ height, width }}>
 				<h1 className="destructive-dialog-title">{title}</h1>
 				<p className="destructive-dialog-content">{content}</p>
 				<div className="destructive-dialog-button-wrapper">

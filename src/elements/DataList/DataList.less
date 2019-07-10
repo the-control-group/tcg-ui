@@ -1,24 +1,16 @@
 .data-list {
-	font-family: @ui-font-sans-serif;
-	max-width: 300px;
+	li {
+		padding: @ui-xx-small @ui-small;
+		border-bottom: 1px solid fade(@ui-color-white, 100% * @ui-opacity-low);
 
-	hr {
-		background-color: @ui-color-gray-medium;
-		height: 1px;
-		border: none;
-	}
+		.close-icon {
+			cursor: pointer;
 
-	.data-list-label {
-		color: @ui-color-slate;
-	}
-
-	.data-list-item {
-		display: flex;
-		justify-content: space-between;
-
-		svg {
-			margin-left: @ui-x-small;
-			margin-right: @ui-x-small;
+			svg {
+				path {
+					fill: @ui-color-blue;
+				}
+			}
 		}
 	}
 }

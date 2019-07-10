@@ -7,13 +7,9 @@ storiesOf('DestructiveDialog', module).add('DestructiveDialog', () => (
 		<DestructiveDialog
 			title="Title"
 			content="Supporting message goes here. Ex: This will add 20 users."
-			primaryActionClickHandler={() =>
-				alert('click handler for primary action button fired!')
-			}
+			primaryActionClickHandler={() => alert('click handler for primary action button fired!')}
 			primaryActionContent="Button"
-			secondaryActionClickHandler={() =>
-				alert('click handler for secondary action button fired!')
-			}
+			secondaryActionClickHandler={() => alert('click handler for secondary action button fired!')}
 			secondaryActionContent="Button"
 		/>
 	</div>

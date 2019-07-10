@@ -32,8 +32,7 @@ storiesOf('DataList', module).add('DataList', () => (
 						}
 					},
 					{
-						text:
-							'This data entry is too long to fit on one line, so it wraps.',
+						text: 'This data entry is too long to fit on one line, so it wraps.',
 						xFn: () => {
 							alert('Clicked');
 						}

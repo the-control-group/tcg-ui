@@ -10,11 +10,7 @@ module.exports = {
 		}
 	},
 	plugins: ['react'],
-	extends: [
-		'eslint:recommended',
-		'plugin:react/recommended',
-		'plugin:prettier/recommended'
-	],
+	extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:prettier/recommended'],
 	env: {
 		browser: true,
 		node: true,
@@ -47,10 +43,7 @@ module.exports = {
 		quotes: [2, 'single'],
 		'require-await': 2,
 		semi: [2, 'always'],
-		'space-before-function-paren': [
-			2,
-			{ anonymous: 'always', named: 'never' }
-		],
+		'space-before-function-paren': [2, { anonymous: 'always', named: 'never' }],
 		'space-infix-ops': 2,
 		strict: 2,
 		yoda: 2,

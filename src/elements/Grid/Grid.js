@@ -18,15 +18,10 @@ const renderGridItems = (items, widths = [], blocks, stacked, gutter) =>
 
 		const colSize = widths[i] || 1;
 
-		const classes = classNames(
-				'ui-grid-item',
-				child.props.className,
-				`gutter-${gutter}`,
-				{
-					'center-y': child.props.centerY,
-					bottom: child.props.bottom
-				}
-			),
+		const classes = classNames('ui-grid-item', child.props.className, `gutter-${gutter}`, {
+				'center-y': child.props.centerY,
+				bottom: child.props.bottom
+			}),
 			style = {
 				...child.props.style
 			};
@@ -81,43 +76,23 @@ const Grid = ({
 		gutterObj = { gutterSmall, gutterMedium, gutterLarge },
 		stackedObj = { stackSmall, stackMedium, stackLarge },
 		swapObj = { swapSmall, swapMedium, swapLarge },
-		widths = itemWidthsObj['itemWidths' + breakpoint]
-			? itemWidthsObj['itemWidths' + breakpoint]
-			: itemWidths,
-		blockGrid = blocksObj['blocks' + breakpoint]
-			? blocksObj['blocks' + breakpoint]
-			: blocks,
-		gutters = gutterObj['gutter' + breakpoint]
-			? gutterObj['gutter' + breakpoint]
-			: gutter,
-		stacked = stackedObj['stack' + breakpoint]
-			? stackedObj['stack' + breakpoint]
-			: stack,
-		swapped = swapObj['swap' + breakpoint]
-			? swapObj['swap' + breakpoint]
-			: swap;
+		widths = itemWidthsObj['itemWidths' + breakpoint] ? itemWidthsObj['itemWidths' + breakpoint] : itemWidths,
+		blockGrid = blocksObj['blocks' + breakpoint] ? blocksObj['blocks' + breakpoint] : blocks,
+		gutters = gutterObj['gutter' + breakpoint] ? gutterObj['gutter' + breakpoint] : gutter,
+		stacked = stackedObj['stack' + breakpoint] ? stackedObj['stack' + breakpoint] : stack,
+		swapped = swapObj['swap' + breakpoint] ? swapObj['swap' + breakpoint] : swap;
 
-	const combinedClasses = classNames(
-		'ui-grid',
-		`outer-gutter-${gutters}`,
-		other.classes,
-		{
-			swap: swapped,
-			block: blockGrid,
-			stacked
-		}
-	);
+	const combinedClasses = classNames('ui-grid', `outer-gutter-${gutters}`, other.classes, {
+		swap: swapped,
+		block: blockGrid,
+		stacked
+	});
 
 	/**
 	 * Render the grid items (`renderGridItems` defined below)
 	 */
 	return (
-		<Common
-			{...other}
-			classes={combinedClasses}
-			style={{ ...other.style }}
-			tag="div"
-		>
+		<Common {...other} classes={combinedClasses} style={{ ...other.style }} tag="div">
 			{renderGridItems(children, widths, blockGrid, stacked, gutters)}
 		</Common>
 	);

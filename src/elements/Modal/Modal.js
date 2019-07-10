@@ -45,12 +45,7 @@ export default class Modal extends Component {
 						<Text variant="subtitle-2" margin="none">
 							{title}
 						</Text>
-						<Icon
-							name="close"
-							className="close-button"
-							onClick={dismiss}
-							size={19}
-						/>
+						<Icon name="close" className="close-button" onClick={dismiss} size={19} />
 					</div>
 
 					{children}
