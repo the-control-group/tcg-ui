@@ -6,10 +6,15 @@
 @ui-text-font-family: @ui-font-sans-serif;
 @ui-text-paragraph-margin: 0 0 @ui-small;
 @ui-text-color: @ui-color-white;
+@ui-text-color-inverse: @ui-color-black;
 
 .ui-text {
 	font-family: @ui-text-font-family;
 	color: @ui-text-color;
+
+	&.inverse {
+		color: @ui-text-color-inverse;
+	}
 
 	p& {
 		margin: @ui-text-paragraph-margin;
