@@ -4,22 +4,31 @@
 
 @ui-destructive-dialog-font: @ui-font-sans-serif;
 @ui-destructive-dialog-letter-spacing: 0.02em;
+@ui-destructive-dialog-background: @ui-color-white;
 
 .ui-destructive-dialog-container {
 	font-family: @ui-destructive-dialog-font;
 	letter-spacing: @ui-destructive-dialog-letter-spacing;
+	position: fixed;
+	z-index: 1000;
+	left: 40%;
+	top: 40%;
+	background: @ui-destructive-dialog-background;
 
 	.destructive-dialog-title {
 		font-size: 20px;
+		margin-left: @ui-small;
 	}
 
 	.destructive-dialog-content {
 		color: @ui-color-gray-dark;
+		margin-left: @ui-small;
 		font-size: 16px;
 	}
 
 	.destructive-dialog-button-wrapper {
 		float: right;
+		margin-right: @ui-small;
 
 		button {
 			margin-left: @ui-medium;

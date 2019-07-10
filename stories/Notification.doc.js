@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Notification } from '../src';
 
-storiesOf('Notification', module).add('Status Badge', () => (
+storiesOf('Notification', module).add('Notification', () => (
 	<div style={{ padding: '2em' }}>
 		<Notification status="success" message="This is a success message." />
 		<br />
