@@ -11,7 +11,7 @@ import Common from '../Common/Common';
 const Text = props => {
 	const {
 		children,
-		variant = 'body-1', // h1-h6 || body-2 || subtitle || subtitle-2 || caption || overline
+		variant = 'body-1', // h1-h6 || body-2 || subtitle || subtitle-2 || caption || overline || input-error
 		bold,
 		italic,
 		uppercase,
