@@ -14,21 +14,15 @@
 	left: 40%;
 	top: 40%;
 	background: @ui-destructive-dialog-background;
+	padding: @ui-small;
 
-	.destructive-dialog-title {
-		font-size: 20px;
-		margin-left: @ui-small;
+	.dialog-content {
+		opacity: @ui-opacity-medium;
 	}
 
-	.destructive-dialog-content {
-		color: @ui-color-gray-dark;
-		margin-left: @ui-small;
-		font-size: 16px;
-	}
-
-	.destructive-dialog-button-wrapper {
+	.button-wrapper {
 		float: right;
-		margin-right: @ui-small;
+		margin: @ui-large @ui-small 0 0;
 
 		button {
 			margin-left: @ui-medium;

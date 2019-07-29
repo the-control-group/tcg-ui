@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+
 import Button from '../Button/Button';
+import Text from '../Text/Text';
 
 const DestructiveDialog = ({
 	title,
 	content,
-	height = 144,
 	width = 296,
 	primaryActionClickHandler,
 	primaryActionContent,
@@ -15,14 +16,20 @@ const DestructiveDialog = ({
 	//TODO: Switch out h1/p elements to utilize Text component when ready
 	return (
 		<Fragment>
-			<div className="ui-modal-overlay" />
-			<div className="ui-destructive-dialog-container" style={{ height, width }}>
-				<h1 className="destructive-dialog-title">{title}</h1>
-				<p className="destructive-dialog-content">{content}</p>
-				<div className="destructive-dialog-button-wrapper">
+			<div className="ui-destructive-dialog-container" style={{ width }}>
+				<Text variant="h5" inverse marginTop="none">
+					{title}
+				</Text>
+
+				<Text className="dialog-content" inverse margin="none">
+					{content}
+				</Text>
+
+				<div className="button-wrapper">
 					<Button onClick={primaryActionClickHandler} bare>
 						{primaryActionContent}
 					</Button>
+
 					<Button onClick={secondaryActionClickHandler} bare>
 						{secondaryActionContent}
 					</Button>
