@@ -22,7 +22,9 @@ const Text = props => {
 
 	const combinedClasses = classNames('ui-text', variant, inverse && 'inverse', other.classes);
 
-	const tag = tag === ('h1' || 'h2' || 'h3' || 'h4' || 'h5' || 'h6') ? variant : 'p';
+	// const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+	// 	tag = headings.includes(variant) ? variant : 'p';
+	const tag = 'p';
 
 	const style = {};
 	if (bold) style.fontWeight = '600';
