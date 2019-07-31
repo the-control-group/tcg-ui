@@ -39,6 +39,16 @@ const Input = ({ label, htmlFor, type = 'text', options, nested, placeholder, fu
 		);
 	}
 
+	if (type === 'textarea') {
+		return (
+			<div className={combinedClasses}>
+				{label && <Label htmlFor={htmlFor}>{label}</Label>}
+
+				<Common tag="textarea" rows="6" classes="ui-input" type={type} placeholder={placeholder} {...other} />
+			</div>
+		);
+	}
+
 	return (
 		<div className={combinedClasses}>
 			{label && <Label htmlFor={htmlFor}>{label}</Label>}
