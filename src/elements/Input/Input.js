@@ -14,8 +14,14 @@ const Label = ({ children, htmlFor }) => (
 	</label>
 );
 
-const Input = ({ label, htmlFor, type = 'text', options, nested, placeholder, full, ...other }) => {
-	const combinedClasses = classNames('ui-input-wrapper', full && 'full', nested && 'nested', other.classes);
+const Input = ({ label, htmlFor, type = 'text', options, nested, placeholder, full, inverse, ...other }) => {
+	const combinedClasses = classNames(
+		'ui-input-wrapper',
+		full && 'full',
+		nested && 'nested',
+		inverse && 'inverse',
+		other.classes
+	);
 
 	if (type === 'select') {
 		return (
