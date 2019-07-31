@@ -72,7 +72,8 @@ const Common = ({ children, classes, tag, ...other }) => {
 			'onMouseDown',
 			'onMouseUp',
 			'readOnly',
-			'defaultValue'
+			'defaultValue',
+			'rows'
 		];
 
 	/**
