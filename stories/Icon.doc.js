@@ -9,5 +9,7 @@ storiesOf('Icon', module).add('Icon', () => (
 		<Icon name="exit" size={15} />
 		<br />
 		<Icon name="foobar" size={15} />
+		<br />
+		<Icon name="verified-badge" size={15} />
 	</div>
 ));
