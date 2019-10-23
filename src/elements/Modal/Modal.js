@@ -8,8 +8,9 @@ import PropTypes from 'prop-types';
 
 import Text from '../Text/Text';
 import Icon from '../Icon/Icon';
+import { isMobile } from '../../util/helpers';
 
-// import classNames from 'classnames';
+import classNames from 'classnames';
 
 export default class Modal extends Component {
 	static propTypes = {
@@ -40,7 +41,7 @@ export default class Modal extends Component {
 			<Fragment>
 				<div className="ui-modal-overlay" onClick={dismiss} />
 
-				<div className="ui-modal">
+				<div className={classNames('ui-modal', { mobile: isMobile() })}>
 					<div className="modal-header">
 						<Text variant="subtitle-2" margin="none">
 							{title}
