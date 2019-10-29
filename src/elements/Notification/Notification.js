@@ -8,22 +8,25 @@ import classNames from 'classnames';
 
 import Common from '../Common/Common';
 import Icon from '../Icon/Icon';
+import { isMobile } from '../../util/helpers';
 
 const Notification = ({ status, message, action, onClick, ...other }) => {
-	const combinedClasses = classNames('notification', status, other.classes);
+	const combinedClasses = classNames('notification', status, other.classes, { mobile: isMobile() });
 
 	return (
 		// TODO: Add action button & onClick to the right of the message when an action is passed down
 		<Common classes={combinedClasses} tag="span" {...other}>
 			<Icon className="notification-icon" name={status} size={20} />
 
-			<span>{message}</span>
+			<div className="notification-content">
+				{message}
 
-			{action && (
-				<span className="action" onClick={onClick}>
-					{action}
-				</span>
-			)}
+				{action && (
+					<span className="action" onClick={onClick}>
+						{action}
+					</span>
+				)}
+			</div>
 		</Common>
 	);
 };

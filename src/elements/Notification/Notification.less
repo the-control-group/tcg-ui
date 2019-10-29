@@ -11,19 +11,30 @@
 	border-radius: 2px;
 	background-color: @ui-color-black;
 	color: @ui-color-white;
+	max-width: 300px;
 
 	span {
 		margin-left: @ui-large;
 	}
 
 	.notification-icon {
-		position: absolute;
 		margin-top: -1px;
+		float: left;
+		width: 10%;
 	}
 
-	.action {
-		color: @ui-color-blue;
-		margin-left: @ui-small;
-		cursor: pointer;
+	.notification-content {
+		float: right;
+		width: 90%;
+
+		.action {
+			color: @ui-color-blue;
+			margin-left: @ui-small;
+			cursor: pointer;
+		}
+	}
+
+	&.mobile {
+		left: @ui-small;
 	}
 }
