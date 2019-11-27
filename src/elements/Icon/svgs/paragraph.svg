@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
   <defs>
-    <clipPath id="clip-path">
+    <clipPath>
       <rect width="24" height="24" fill="none"/>
     </clipPath>
   </defs>
-  <g id="TCG-CRT-NOTES-ICON" clip-path="url(#clip-path)">
-    <g id="subject-24px">
-      <path id="Shape" d="M14,17H4v2H14Zm6-8H4v2H20ZM4,15H20V13H4ZM4,5V7H20V5Z"/>
-      <path id="Path" d="M0,0H24V24H0Z" fill="none" fill-rule="evenodd"/>
+  <g clip-path="url(#clip-path)">
+    <g>
+      <path d="M14,17H4v2H14Zm6-8H4v2H20ZM4,15H20V13H4ZM4,5V7H20V5Z"/>
+      <path d="M0,0H24V24H0Z" fill="none" fill-rule="evenodd"/>
     </g>
   </g>
 </svg>

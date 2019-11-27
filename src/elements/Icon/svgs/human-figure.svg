@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
   <defs>
-    <clipPath id="clip-path">
+    <clipPath>
       <rect width="24" height="24" fill="none"/>
     </clipPath>
   </defs>
-  <g id="baseline-person-24px_1_" data-name="baseline-person-24px (1)" clip-path="url(#clip-path)">
-    <path id="Path_5895" data-name="Path 5895" d="M12,12A4,4,0,1,0,8,8,4,4,0,0,0,12,12Zm0,2c-2.67,0-8,1.34-8,4v2H20V18C20,15.34,14.67,14,12,14Z"/>
-    <path id="Path_5896" data-name="Path 5896" d="M0,0H24V24H0Z" fill="none"/>
+  <g clip-path="url(#clip-path)">
+    <path d="M12,12A4,4,0,1,0,8,8,4,4,0,0,0,12,12Zm0,2c-2.67,0-8,1.34-8,4v2H20V18C20,15.34,14.67,14,12,14Z"/>
+    <path d="M0,0H24V24H0Z" fill="none"/>
   </g>
 </svg>

@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
   <defs>
-    <clipPath id="clip-path">
+    <clipPath>
       <rect width="24" height="24" fill="none"/>
     </clipPath>
   </defs>
-  <g id="Icon:_Account_-_Downsell_1" data-name="Icon: Account - Downsell – 1" clip-path="url(#clip-path)">
-    <g id="TCG-CRT-ICON-DOWNSELL" transform="translate(3 3)">
-      <g id="Group-2">
-        <g id="attach_money-24px">
-          <path id="Path" d="M5.383,7.9c-2.23-.59-2.947-1.2-2.947-2.15,0-1.09.992-1.85,2.652-1.85,1.749,0,2.4.85,2.456,2.1H9.715A3.969,3.969,0,0,0,6.562,2.19V0H3.615V2.16C1.709,2.58.177,3.84.177,5.77c0,2.31,1.876,3.46,4.617,4.13,2.456.6,2.947,1.48,2.947,2.41,0,.69-.481,1.79-2.652,1.79-2.024,0-2.819-.92-2.927-2.1H0a4.157,4.157,0,0,0,3.615,3.83V18H6.562V15.85C8.477,15.48,10,14.35,10,12.3,10,9.46,7.613,8.49,5.383,7.9Z"/>
+  <g clip-path="url(#clip-path)">
+    <g transform="translate(3 3)">
+      <g>
+        <g>
+          <path d="M5.383,7.9c-2.23-.59-2.947-1.2-2.947-2.15,0-1.09.992-1.85,2.652-1.85,1.749,0,2.4.85,2.456,2.1H9.715A3.969,3.969,0,0,0,6.562,2.19V0H3.615V2.16C1.709,2.58.177,3.84.177,5.77c0,2.31,1.876,3.46,4.617,4.13,2.456.6,2.947,1.48,2.947,2.41,0,.69-.481,1.79-2.652,1.79-2.024,0-2.819-.92-2.927-2.1H0a4.157,4.157,0,0,0,3.615,3.83V18H6.562V15.85C8.477,15.48,10,14.35,10,12.3,10,9.46,7.613,8.49,5.383,7.9Z"/>
         </g>
-        <path id="Combined-Shape" d="M15,1V3h4V5H15V7a42.758,42.758,0,0,0-4-3Z" transform="translate(12 19) rotate(-90)" fill-rule="evenodd"/>
-        <path id="Combined-Shape-Copy-2" d="M15,11v2h4v2H15v2a42.758,42.758,0,0,0-4-3Z" transform="translate(2 29) rotate(-90)" fill-rule="evenodd"/>
+        <path d="M15,1V3h4V5H15V7a42.758,42.758,0,0,0-4-3Z" transform="translate(12 19) rotate(-90)" fill-rule="evenodd"/>
+        <path d="M15,11v2h4v2H15v2a42.758,42.758,0,0,0-4-3Z" transform="translate(2 29) rotate(-90)" fill-rule="evenodd"/>
       </g>
     </g>
-    <rect id="Rectangle_4026" data-name="Rectangle 4026" width="24" height="24" fill="none"/>
+    <rect width="24" height="24" fill="none"/>
   </g>
 </svg>

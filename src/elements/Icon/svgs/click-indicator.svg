@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
   <defs>
-    <clipPath id="clip-path">
+    <clipPath>
       <rect width="24" height="24" fill="none"/>
     </clipPath>
   </defs>
-  <g id="Icon:_Clickpath_1" data-name="Icon: Clickpath – 1" clip-path="url(#clip-path)">
-    <g id="TCG-CRT-CLICK-PATH-ICON" transform="translate(2 2)">
-      <g id="np_cursor_2832483_000000-copy">
-        <path id="Path" d="M20,18l-2,2-4-4-3,3L8,8l11,3-3,3Z"/>
-        <rect id="Rectangle-Copy-6" width="2" height="5" transform="translate(10)"/>
-        <path id="Path-2" data-name="Path" d="M0,12V10H5v2Z"/>
-        <path id="Path-Copy" d="M2,5V3H7V5Z" transform="translate(4.146 -2.01) rotate(45)"/>
+  <g clip-path="url(#clip-path)">
+    <g transform="translate(2 2)">
+      <g>
+        <path d="M20,18l-2,2-4-4-3,3L8,8l11,3-3,3Z"/>
+        <rect width="2" height="5" transform="translate(10)"/>
+        <path d="M0,12V10H5v2Z"/>
+        <path d="M2,5V3H7V5Z" transform="translate(4.146 -2.01) rotate(45)"/>
       </g>
     </g>
-    <rect id="Rectangle_4077" data-name="Rectangle 4077" width="24" height="24" fill="none"/>
+    <rect width="24" height="24" fill="none"/>
   </g>
 </svg>
