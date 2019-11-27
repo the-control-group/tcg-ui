@@ -35,8 +35,6 @@ storiesOf('Icon', module).add('Icon', () => (
 		<br />
 		<Icon name="chart" size={36} style={iconStyle} />
 		<br />
-		<Icon name="checkmark-circled" size={36} style={iconStyle} />
-		<br />
 		<Icon name="click-indicator" size={36} style={iconStyle} />
 		<br />
 		<Icon name="close" size={36} style={iconStyle} />
@@ -54,10 +52,6 @@ storiesOf('Icon', module).add('Icon', () => (
 		<Icon name="email-2" size={36} style={iconStyle} />
 		<br />
 		<Icon name="email" size={36} style={iconStyle} />
-		<br />
-		<Icon name="exclamation-circled" size={36} style={iconStyle} />
-		<br />
-		<Icon name="exclamation-triangle" size={36} style={iconStyle} />
 		<br />
 		<Icon name="exit" size={36} style={iconStyle} />
 		<br />
