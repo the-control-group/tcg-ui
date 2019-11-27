@@ -23,10 +23,12 @@ const DataList = ({
 		<Common classes={combinedClasses} tag="ul" {...other}>
 			{content.map(item => (
 				<li key={item.id}>
-					<Grid>
-						<Text variant="body" margin="none" centerY>
-							{item.text}
-						</Text>
+					<Grid itemWidths={[8, 4]}>
+						<div>
+							<Text variant="body" margin="none" centerY>
+								{item.text}
+							</Text>
+						</div>
 
 						<Div right centerY>
 							{item.style === 'toggle' ? (
