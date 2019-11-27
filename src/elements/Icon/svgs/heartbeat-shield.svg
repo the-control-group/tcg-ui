@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="24" height="24" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Icon:_Account_-_Data_Monitoring_1" data-name="Icon: Account - Data Monitoring – 1" clip-path="url(#clip-path)">
+    <path id="Exclusion_1" data-name="Exclusion 1" d="M-2884,23646v0l-2.718-1.707a12.9,12.9,0,0,1-6.284-10.812v-4.937l9-2.541,9,2.541v4.938a12.84,12.84,0,0,1-6.279,10.813L-2884,23646Zm-1.531-14.184v0l2.058,7.3a1.08,1.08,0,0,0,.926.879h.059a1.059,1.059,0,0,0,.932-.725l1.413-3.512h1.543a.7.7,0,0,0,.6-.766.694.694,0,0,0-.6-.76h-1.65a1.061,1.061,0,0,0-.932.723l-1.276,3.229-2.065-7.311a1.1,1.1,0,0,0-.992-.879.878.878,0,0,0-.361.078,1.144,1.144,0,0,0-.582.646l-1.395,3.514h-1.549a.7.7,0,0,0-.6.76.707.707,0,0,0,.6.766h1.65a1.059,1.059,0,0,0,.932-.725l1.287-3.219Z" transform="translate(2896.003 -23624)"/>
+    <rect id="Rectangle_4022" data-name="Rectangle 4022" width="24" height="24" fill="none"/>
+  </g>
+</svg>
