@@ -110,5 +110,7 @@ storiesOf('Icon', module).add('Icon', () => (
 		<Icon name="thumbnail-placeholder" size={36} style={iconStyle} />
 		<br />
 		<Icon name="verified-badge" size={36} style={iconStyle} />
+		<br />
+		<Icon name="checkmark-green" size={36} style={iconStyle} />
 	</div>
 ));
