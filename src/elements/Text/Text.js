@@ -12,6 +12,7 @@ const Text = props => {
 	const {
 		children,
 		variant = 'body-1', // h1-h6 || body-2 || subtitle || subtitle-2 || caption || overline || input-error
+		medium,
 		bold,
 		italic,
 		uppercase,
@@ -27,6 +28,7 @@ const Text = props => {
 	const tag = 'p';
 
 	const style = {};
+	if (medium) style.fontWeight = '500';
 	if (bold) style.fontWeight = '600';
 	if (italic) style.fontStyle = 'italic';
 	if (uppercase) style.textTransform = 'uppercase';
@@ -42,6 +44,7 @@ const Text = props => {
 Text.propTypes = {
 	children: PropTypes.node.isRequired,
 	variant: PropTypes.string,
+	medium: PropTypes.bool,
 	bold: PropTypes.bool,
 	italic: PropTypes.bool,
 	uppercase: PropTypes.bool,
