@@ -6,6 +6,5 @@
   </defs>
   <g clip-path="url(#clip-path)">
     <path d="M12,12A4,4,0,1,0,8,8,4,4,0,0,0,12,12Zm0,2c-2.67,0-8,1.34-8,4v2H20V18C20,15.34,14.67,14,12,14Z"/>
-    <path d="M0,0H24V24H0Z" fill="none"/>
   </g>
 </svg>
