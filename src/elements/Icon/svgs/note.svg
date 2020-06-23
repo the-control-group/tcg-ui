@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <g transform="translate(4 5)">
+    <g transform="translate(-4 -5)" opacity="0.87">
+      <path id="Shape" d="M14,17H4v2H14Zm6-8H4v2H20ZM4,15H20V13H4ZM4,5V7H20V5Z"/>
+    </g>
+  </g>
+</svg>
