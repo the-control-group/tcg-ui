@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <g transform="translate(-1491.143 -856)">
-    <path d="M0,0H24V24H0Z" transform="translate(1491.143 856)" fill="none"/>
     <path d="M1,21H23L12,2Zm12-3H11V16h2Zm0-4H11V10h2Z" transform="translate(1491.143 856)" fill="#f8e71c"/>
   </g>
 </svg>
