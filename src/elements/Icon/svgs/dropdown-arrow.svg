@@ -1,10 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
   <g>
-    <g>
-      <path d="M0,0H32V32H0Z" fill="none"/>
-    </g>
-  </g>
-  <g>
     <path d="M868.52,286.793l7.927,8.563,8.073-8.563Z" transform="translate(-860.52 -274.793)" fill="#fff"/>
   </g>
 </svg>
