@@ -27,7 +27,7 @@
 	"homepage": "https://github.com/the-control-group/tcg-ui#readme",
 	"devDependencies": {
 		"@babel/core": "^7.4.4",
-		"@storybook/react": "^5.0.11",
+		"@storybook/react": "^7.0.7",
 		"babel-eslint": "^8.2.6",
 		"babel-loader": "^8.0.5",
 		"classnames": "^2.2.6",
